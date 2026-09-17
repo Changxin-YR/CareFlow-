@@ -57,6 +57,23 @@ def load_manifest() -> dict:
     return out
 
 
+def _gap_before(lines: list[str], start: int, has_prev_block: bool) -> str:
+    """返回该块相对上一块在**原文中的真实分隔符**。
+
+    * 第一个块 → ``""``
+    * 上一行是空行 → ``"\\n\\n"``（原文就是段落分隔）
+    * 上一行非空 → ``"\\n"``（原文只是换行，不能补成空行）
+
+    这是保证 ``content`` 逐字等于原文连续片段的关键：以前统一用 ``"\\n\\n"``
+    重连，遇到「标题行紧跟正文行」就会凭空多出一个空行。
+    """
+    if not has_prev_block:
+        return ""
+    if start > 0 and not lines[start - 1].strip():
+        return "\n\n"
+    return "\n"
+
+
 def parse_blocks(text: str) -> list[dict]:
     """Split cleaned Markdown into heading / table / text blocks."""
     lines = text.split("\n")
@@ -73,14 +90,16 @@ def parse_blocks(text: str) -> list[dict]:
             while j < len(lines) and lines[j].startswith("|"):
                 rows.append(lines[j])
                 j += 1
-            blocks.append({"type": "table", "lines": rows, "text": "\n".join(rows)})
+            blocks.append({"type": "table", "lines": rows, "text": "\n".join(rows),
+                           "gap": _gap_before(lines, i, bool(blocks))})
             i = j
             continue
         m = re.match(r"^(#{1,6})\s+(.*)$", line)
         if m:
             blocks.append({"type": "heading", "level": len(m.group(1)),
                            "text": m.group(2).strip(),
-                           "md": line, "lines": [line]})
+                           "md": line, "lines": [line],
+                           "gap": _gap_before(lines, i, bool(blocks))})
             i += 1
             continue
         j = i
@@ -94,7 +113,8 @@ def parse_blocks(text: str) -> list[dict]:
             # 从而 i == j 导致死循环。这里强制前进一行。
             buf = [lines[i]]
             j = i + 1
-        blocks.append({"type": "text", "lines": buf, "text": "\n".join(buf)})
+        blocks.append({"type": "text", "lines": buf, "text": "\n".join(buf),
+                       "gap": _gap_before(lines, i, bool(blocks))})
         i = j
     return blocks
 
@@ -174,6 +194,7 @@ def build_units(blocks: list[dict], max_chars: int) -> list[dict]:
     for idx, b in enumerate(blocks):
         if b["type"] == "heading":
             units.append({"kind": "heading", "level": b["level"], "text": b["md"],
+                          "gap": b.get("gap", "\n\n"),
                           "section_path": b["section_path"],
                           "section": b["text"], "block_index": idx})
             continue
@@ -183,6 +204,7 @@ def build_units(blocks: list[dict], max_chars: int) -> list[dict]:
                 txt = "\n".join(part)
                 suffix = "" if pi == 0 else "\n（续表）"
                 units.append({"kind": "table", "text": txt + suffix,
+                              "gap": b.get("gap", "\n\n") if pi == 0 else "\n",
                               "section_path": b["section_path"],
                               "section": b["section_path"][-1] if b["section_path"] else "",
                               "block_index": idx})
@@ -190,6 +212,7 @@ def build_units(blocks: list[dict], max_chars: int) -> list[dict]:
         for pi, piece in enumerate(split_long_text(b["text"], max_chars)):
             units.append({"kind": "text", "text": piece,
                           "glue": pi > 0,
+                          "gap": b.get("gap", "\n\n") if pi == 0 else "",
                           "section_path": b["section_path"],
                           "section": b["section_path"][-1] if b["section_path"] else "",
                           "block_index": idx})
@@ -206,7 +229,8 @@ def join_units(units: list[dict]) -> str:
         if not unit["text"].strip():
             continue
         if parts and not unit.get("glue"):
-            parts.append("\n\n")
+            # 用该 unit 在原文中的真实前置分隔符，而不是一律 "\n\n"
+            parts.append(unit.get("gap", "\n\n"))
         parts.append(unit["text"])
     return "".join(parts)
 

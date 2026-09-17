@@ -36,6 +36,22 @@ DATE_OVERRIDES = {
 }
 
 
+#: 已下载、但**不得进入生产检索**的文档。
+#:
+#: 判据来自 `scripts/verify_content_match.py` 的 title_bigram_ratio：
+#: 若文件内容里几乎找不到注册标题的字样，说明抓到的不是这份文档（典型是无文本层扫描件
+#: 只剩少量版式文字）。这类文件保留在磁盘上作为来源记录，但 status=draft，
+#: 生产检索只使用 status=active，因此不会污染 Citation。
+FORCE_DRAFT = {
+    "LIFE001A": "内容与标题不匹配（title_bigram_ratio=0.11）："
+    "官方附件为扫描件，文本层仅约 456 字符，需 OCR",
+    "LIFE001B": "内容与标题不匹配（title_bigram_ratio=0.11）："
+    "官方附件为扫描件，文本层仅约 472 字符，需 OCR",
+    "LIFE001C": "内容与标题不匹配（title_bigram_ratio=0.05）："
+    "官方附件为扫描件，文本层仅约 503 字符，需 OCR",
+}
+
+
 def main(argv: list[str]) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date-report", default=str(S.RAW_DIR / "_dates.json"))
@@ -59,6 +75,11 @@ def main(argv: list[str]) -> int:
             with open(S.PROJECT_ROOT / local, "rb") as fh:  # ensure it is still there
                 fh.read(1)
             row_status = "active"
+            if did in FORCE_DRAFT:
+                # 文件已拿到但内容不可用于检索：保留 local_file/sha256 作来源记录，
+                # 只把 status 降为 draft（生产检索只使用 active）
+                row_status = "draft"
+                notes = (notes + "; " if notes else "") + FORCE_DRAFT[did]
             if e.get("waf_note"):
                 notes = (notes + "; " if notes else "") + e["waf_note"]
             if e.get("annex_pdf"):
@@ -70,7 +91,13 @@ def main(argv: list[str]) -> int:
             reason = (e.get("error") or "download failed").replace("\n", " ")[:200]
             notes = (notes + "; " if notes else "") + f"pending manual download: {reason}"
 
-        publish = (dates.get(did, {}) or {}).get("publish_date", "") or DATE_OVERRIDES.get(did, "")
+        # 优先级：官方页面抽取值 > 人工核定的 DATE_OVERRIDES > 注册表内置值
+        # （注册表内置值此前被漏掉，导致人工核定的发布日期进不了 manifest）
+        publish = (
+            (dates.get(did, {}) or {}).get("publish_date", "")
+            or DATE_OVERRIDES.get(did, "")
+            or doc.get("publish_date", "")
+        )
         effective = (dates.get(did, {}) or {}).get("effective_date", "") or doc["effective_date"]
         rows.append({
             "document_id": did,

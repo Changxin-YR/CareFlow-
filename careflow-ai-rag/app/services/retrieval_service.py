@@ -103,12 +103,21 @@ class BM25Index:
         self.documents: list[Chunk] = []
         self._build(chunks)
 
+    #: 标题 / 章节词在 BM25 的 tf 上额外计几次（字段加权）
+    HEAD_FIELD_BOOST = 3
+
     def _build(self, chunks: list[Chunk]) -> None:
         for chunk in chunks:
             tokens = tokenize(f"{chunk.title} {chunk.section} {chunk.content}")
             if not tokens:
                 continue
             counter = Counter(tokens)
+            # 字段加权：标题/章节命中比正文命中更有指示性。
+            # 典型作用：`WHO PEN 是什么？` 里 "who" 在全部 WHO 切片中都出现（页眉），
+            # IDF 极低；只有标题里的 "WHO PEN" 才是真正的判别信号。
+            head_tokens = tokenize(f"{chunk.title} {chunk.section}")
+            for term in head_tokens:
+                counter[term] += self.HEAD_FIELD_BOOST
             self.documents.append(chunk)
             self.chunk_ids.append(chunk.chunk_id)
             self.term_freqs.append(counter)
@@ -129,6 +138,32 @@ class BM25Index:
         if df == 0:
             return 0.0
         return math.log(1.0 + (self.total_docs - df + 0.5) / (df + 0.5))
+
+    def usable_query_terms(
+        self, query: str, allowed_ids: set[str] | None = None
+    ) -> dict[str, float]:
+        """返回查询中**在本次检索范围内有区分度**（df>0）的词及其 IDF。
+
+        `allowed_ids=None` 表示全语料。给定域过滤时，只在子集内统计 df ——
+        因为子集里根本不存在的词不可能被命中，把它计入分母会让
+        「中文描述 + 英文缩写」这类跨语言查询的覆盖率被永久压垮。
+        """
+        terms = set(tokenize(normalize_query(query)))
+        if allowed_ids is None:
+            return {term: self._idf(term) for term in terms if self._idf(term) > 0.0}
+
+        indexes = [
+            i for i, doc in enumerate(self.documents) if doc.document_id in allowed_ids
+        ]
+        subset_n = len(indexes)
+        if not subset_n:
+            return {}
+        out: dict[str, float] = {}
+        for term in terms:
+            df = sum(1 for i in indexes if term in self.term_freqs[i])
+            if df > 0:
+                out[term] = math.log(1.0 + (subset_n - df + 0.5) / (df + 0.5))
+        return out
 
     def search(
         self, query: str, *, allowed_ids: set[str] | None = None
@@ -251,15 +286,26 @@ class RetrievalService:
             # 因此要求「分数达标」且「命中词数达标」，否则按无证据处理（无答案 > 编造答案）
             floor = self.settings.rag_min_relevance_score
             min_terms = self.settings.rag_min_matched_terms
+            min_coverage = self.settings.rag_min_term_coverage
+            usable = self.index.usable_query_terms(normalized, allowed_ids)
+            usable_count = max(1, len(usable))
             gated = 0
             for chunk, score, matched in raw_hits:
-                if matched >= min_terms or score >= floor:
+                coverage = matched / usable_count
+                # 覆盖率分支必须配 matched>=2：极短查询（可用词只有 1~2 个）下
+                # 命中 1 个词就 coverage=1.0，会把无关查询放行。
+                if (
+                    matched >= min_terms
+                    or score >= floor
+                    or (matched >= 2 and coverage >= min_coverage)
+                ):
                     local_hits.append((chunk, score))
                 else:
                     gated += 1
             if gated:
                 result.notes.append(
-                    f"相关性闸门过滤 {gated} 条弱命中（matched<{min_terms} 且 score<{floor}）"
+                    f"相关性闸门过滤 {gated} 条弱命中"
+                    f"（matched<{min_terms} 且 score<{floor} 且 coverage<{min_coverage}）"
                 )
             result.sources_used.append("local_bm25")
 

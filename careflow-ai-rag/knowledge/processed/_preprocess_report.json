@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T06:58:13+00:00",
+  "generated_at": "2026-09-17T08:50:25+00:00",
   "documents": [
     {
       "document_id": "CORE001",
@@ -234,11 +234,11 @@
     },
     {
       "document_id": "LIFE001",
-      "title": "高血压等慢性病营养和运动指导原则（2024年版）",
+      "title": "高血压营养和运动指导原则（2024年版）",
       "source_file": "knowledge/raw/06_lifestyle/LIFE001.html",
       "extra_files": [],
       "out_file": "knowledge/processed/LIFE001.md",
-      "chars": 1329,
+      "chars": 1325,
       "headings": 7,
       "tables": 0,
       "status": "ok",
@@ -246,7 +246,55 @@
       "input_kind": "pdf",
       "used_file": "knowledge/raw/06_lifestyle/LIFE001.pdf",
       "annex_pdf": "knowledge/raw/06_lifestyle/LIFE001.pdf",
-      "annex_pdf_chars": 1329
+      "annex_pdf_chars": 1325
+    },
+    {
+      "document_id": "LIFE001A",
+      "title": "高血糖症营养和运动指导原则（2024年版）",
+      "source_file": "knowledge/raw/06_lifestyle/LIFE001A.pdf",
+      "extra_files": [],
+      "out_file": "knowledge/processed/LIFE001A.md",
+      "chars": 456,
+      "headings": 5,
+      "tables": 0,
+      "status": "ok",
+      "error": "",
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/06_lifestyle/LIFE001A.pdf",
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE001A.pdf",
+      "annex_pdf_chars": 456
+    },
+    {
+      "document_id": "LIFE001B",
+      "title": "高脂血症营养和运动指导原则（2024年版）",
+      "source_file": "knowledge/raw/06_lifestyle/LIFE001B.pdf",
+      "extra_files": [],
+      "out_file": "knowledge/processed/LIFE001B.md",
+      "chars": 472,
+      "headings": 6,
+      "tables": 0,
+      "status": "ok",
+      "error": "",
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/06_lifestyle/LIFE001B.pdf",
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE001B.pdf",
+      "annex_pdf_chars": 472
+    },
+    {
+      "document_id": "LIFE001C",
+      "title": "高尿酸血症营养和运动指导原则（2024年版）",
+      "source_file": "knowledge/raw/06_lifestyle/LIFE001C.pdf",
+      "extra_files": [],
+      "out_file": "knowledge/processed/LIFE001C.md",
+      "chars": 503,
+      "headings": 8,
+      "tables": 0,
+      "status": "ok",
+      "error": "",
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/06_lifestyle/LIFE001C.pdf",
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE001C.pdf",
+      "annex_pdf_chars": 503
     },
     {
       "document_id": "LIFE002",
@@ -346,17 +394,33 @@
     },
     {
       "document_id": "LIFE008",
-      "title": "居民体重管理核心知识（2024年版）及释义",
+      "title": "居民体重管理核心知识（2024年版）",
       "source_file": "knowledge/raw/06_lifestyle/LIFE008.html",
       "extra_files": [],
       "out_file": "knowledge/processed/LIFE008.md",
-      "chars": 597,
+      "chars": 594,
       "headings": 0,
       "tables": 0,
       "status": "ok",
       "error": "",
       "input_kind": "html",
       "used_file": "knowledge/raw/06_lifestyle/LIFE008.html"
+    },
+    {
+      "document_id": "LIFE008A",
+      "title": "居民体重管理核心知识（2024年版）释义",
+      "source_file": "knowledge/raw/06_lifestyle/LIFE008A.pdf",
+      "extra_files": [],
+      "out_file": "knowledge/processed/LIFE008A.md",
+      "chars": 2092,
+      "headings": 11,
+      "tables": 0,
+      "status": "ok",
+      "error": "",
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/06_lifestyle/LIFE008A.pdf",
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE008A.pdf",
+      "annex_pdf_chars": 2092
     },
     {
       "document_id": "PRIM001",
@@ -409,50 +473,56 @@
     {
       "document_id": "WHO001",
       "title": "WHO PEN (Package of essential NCD interventions)",
-      "source_file": "knowledge/raw/08_who/WHO001.html",
+      "source_file": "knowledge/raw/08_who/WHO001.pdf",
       "extra_files": [],
       "out_file": "knowledge/processed/WHO001.md",
-      "chars": 1429,
-      "headings": 0,
+      "chars": 324419,
+      "headings": 25532,
       "tables": 0,
       "status": "ok",
       "error": "",
-      "input_kind": "html",
-      "used_file": "knowledge/raw/08_who/WHO001.html"
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/08_who/WHO001.pdf",
+      "annex_pdf": "knowledge/raw/08_who/WHO001.pdf",
+      "annex_pdf_chars": 324419
     },
     {
       "document_id": "WHO002",
       "title": "WHO HEARTS: Risk-based CVD Management",
-      "source_file": "knowledge/raw/08_who/WHO002.html",
+      "source_file": "knowledge/raw/08_who/WHO002.pdf",
       "extra_files": [],
       "out_file": "knowledge/processed/WHO002.md",
-      "chars": 2259,
-      "headings": 0,
+      "chars": 367779,
+      "headings": 34875,
       "tables": 0,
       "status": "ok",
       "error": "",
-      "input_kind": "html",
-      "used_file": "knowledge/raw/08_who/WHO002.html"
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/08_who/WHO002.pdf",
+      "annex_pdf": "knowledge/raw/08_who/WHO002.pdf",
+      "annex_pdf_chars": 367779
     },
     {
       "document_id": "WHO003",
       "title": "WHO HEARTS: Healthy-lifestyle counselling",
-      "source_file": "knowledge/raw/08_who/WHO003.html",
+      "source_file": "knowledge/raw/08_who/WHO003.pdf",
       "extra_files": [],
       "out_file": "knowledge/processed/WHO003.md",
-      "chars": 2419,
-      "headings": 0,
+      "chars": 51174,
+      "headings": 150,
       "tables": 0,
       "status": "ok",
       "error": "",
-      "input_kind": "html",
-      "used_file": "knowledge/raw/08_who/WHO003.html"
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/08_who/WHO003.pdf",
+      "annex_pdf": "knowledge/raw/08_who/WHO003.pdf",
+      "annex_pdf_chars": 51174
     }
   ],
   "summary": {
-    "ok": 27,
+    "ok": 31,
     "no_source": 3,
     "failed": 0,
-    "total_chars": 612852
+    "total_chars": 1353633
   }
 }

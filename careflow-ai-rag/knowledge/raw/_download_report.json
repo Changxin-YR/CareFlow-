@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-17T05:42:46+00:00",
   "script": "scripts/download_documents.py",
-  "documents_total": 30,
+  "documents_total": 34,
   "documents": [
     {
       "document_id": "CORE001",
@@ -1145,25 +1145,26 @@
       "url": "https://www.who.int/publications/i/item/9789240009226",
       "status": "downloaded",
       "http_status": 200,
-      "bytes": 85630,
-      "sha256": "ac42fa15a71893441e3662f14a2f16d6b898ed2263b8130105f2be29ed7b8901",
+      "bytes": 2584724,
+      "sha256": "a09cc0ea4b39fd6ebfceb4d73f20bee7c4a7baeb3ae60150160cad646d6ec7e6",
       "error": "",
       "attempt": 1,
-      "local_file": "knowledge/raw/08_who/WHO001.html",
-      "ext": "html",
-      "content_kind": "html",
+      "local_file": "knowledge/raw/08_who/WHO001.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
       "secondary_files": [],
       "attachments": [],
       "annex_pdf": null,
       "annex_pdf_chars": 0,
       "checks": [
         {
-          "url": "https://iris.who.int/bitstream/handle/10665/334186/9789240009226-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+          "url": "https://iris.who.int/server/api/core/bitstreams/<uuid>/content",
+          "error": "",
+          "note": "WHO IRIS 新版 API 直链（旧 bitstream/handle 已失效，返回 755 字节 HTML）"
         }
       ],
-      "fetched_at": "2026-09-17T05:32:02+00:00",
-      "host": "www.who.int",
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "iris.who.int",
       "waf_note": "",
       "annex_candidates": []
     },
@@ -1173,13 +1174,13 @@
       "url": "https://www.who.int/publications/i/item/9789240001367",
       "status": "downloaded",
       "http_status": 200,
-      "bytes": 91660,
-      "sha256": "2df85c7abb5a5fb9115f03b065ae0ab3affda7e44706c76b0b28a2efcce9546c",
+      "bytes": 2913503,
+      "sha256": "1f836448bc5f0455b717d9c1d6fc4cb057a286b8303fa940bf14c356785e2510",
       "error": "",
       "attempt": 1,
-      "local_file": "knowledge/raw/08_who/WHO002.html",
-      "ext": "html",
-      "content_kind": "html",
+      "local_file": "knowledge/raw/08_who/WHO002.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
       "secondary_files": [],
       "attachments": [
         "https://apps.who.int/iris/bitstream/handle/10665/260422/WHO-NMH-NVI-18.1-eng.pdf",
@@ -1194,28 +1195,13 @@
       "annex_pdf_chars": 0,
       "checks": [
         {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "http://apps.who.int/iris/bitstream/handle/10665/275728/WHO-NMH-NVI-18.14-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+          "url": "https://iris.who.int/server/api/core/bitstreams/<uuid>/content",
+          "error": "",
+          "note": "WHO IRIS 新版 API 直链（旧 bitstream/handle 已失效，返回 755 字节 HTML）"
         }
       ],
-      "fetched_at": "2026-09-17T05:32:20+00:00",
-      "host": "www.who.int",
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "iris.who.int",
       "waf_note": "",
       "annex_candidates": [
         {
@@ -1261,13 +1247,13 @@
       "url": "https://www.who.int/publications/i/item/WHO-NMH-NVI-18-1",
       "status": "downloaded",
       "http_status": 200,
-      "bytes": 92446,
-      "sha256": "895e185dc2976fe9f472d3d8fdcbbb0dab39612e6c1c202633b099f3234fc9a7",
+      "bytes": 2267009,
+      "sha256": "bf0a3285b664683830e0645357d08614b75e3ead120706c47ca7c7f2a88f9dc5",
       "error": "",
       "attempt": 1,
-      "local_file": "knowledge/raw/08_who/WHO003.html",
-      "ext": "html",
-      "content_kind": "html",
+      "local_file": "knowledge/raw/08_who/WHO003.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
       "secondary_files": [],
       "attachments": [
         "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
@@ -1282,28 +1268,13 @@
       "annex_pdf_chars": 0,
       "checks": [
         {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
-        },
-        {
-          "url": "http://apps.who.int/iris/bitstream/handle/10665/260423/WHO-NMH-NVI-18.5-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=502 bytes=381"
-        },
-        {
-          "url": "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
-          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+          "url": "https://iris.who.int/server/api/core/bitstreams/<uuid>/content",
+          "error": "",
+          "note": "WHO IRIS 新版 API 直链（旧 bitstream/handle 已失效，返回 755 字节 HTML）"
         }
       ],
-      "fetched_at": "2026-09-17T05:34:28+00:00",
-      "host": "www.who.int",
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "iris.who.int",
       "waf_note": "",
       "annex_candidates": [
         {
@@ -1342,11 +1313,107 @@
           "match_score": 3
         }
       ]
+    },
+    {
+      "document_id": "LIFE001A",
+      "title": "高血糖症营养和运动指导原则（2024年版）",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333.shtml",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 6580831,
+      "sha256": "5cd26006012c52461fbefee9a4befe0c3896592425266c4c5e61c2ca09b75601",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE001A.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011997_53103.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "official annex PDF downloaded via browser context (WZWS)"
+    },
+    {
+      "document_id": "LIFE001B",
+      "title": "高脂血症营养和运动指导原则（2024年版）",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333.shtml",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 5580591,
+      "sha256": "9f2860a57817a64c2e377c7b536d266a36862714eacc53f888034f41db5dc359",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE001B.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011142_13562.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "official annex PDF downloaded via browser context (WZWS)"
+    },
+    {
+      "document_id": "LIFE001C",
+      "title": "高尿酸血症营养和运动指导原则（2024年版）",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333.shtml",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 5483126,
+      "sha256": "b65836272d2b1612264744377e99b58ef9ccaa137ac009b3b38f8dcf9656ece0",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE001C.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003012304_36543.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "official annex PDF downloaded via browser context (WZWS)"
+    },
+    {
+      "document_id": "LIFE008A",
+      "title": "居民体重管理核心知识（2024年版）释义",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44.shtml",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 155242,
+      "sha256": "fa044afcfe008651fdad7cf7a8f531a304f135794580a1f1b2aec6fc6347edd1",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE008A.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103074_71816.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T08:48:17+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "official annex PDF downloaded via browser context (WZWS)"
     }
   ],
   "summary": {
-    "downloaded": 23,
-    "skipped": 4,
+    "downloaded": 28,
+    "skipped": 3,
     "failed": 3
   }
 }

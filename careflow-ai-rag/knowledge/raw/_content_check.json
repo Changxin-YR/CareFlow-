@@ -112,10 +112,10 @@
     "head": "237 中国循环杂志 2023 年3 月 第38 卷 第3 期（总第297 期）Chinese Circulation Journal，March，2023，Vol. 38 No.3（Serial No.297） 中国血脂管理指南（2023 年） 中国血脂管理指南修订联合专家委员会 通信作者：李建军 Email：lijianjun938@126.com；赵水平 Email：zhaosp1009@163.com；高润霖 Email：gaorunlin@citmd.com 中图分类号：R54 文献标识码"
   },
   "LIFE001": {
-    "registry_title": "高血压等慢性病营养和运动指导原则（2024年版）",
+    "registry_title": "高血压营养和运动指导原则（2024年版）",
     "source": "knowledge/raw/06_lifestyle/LIFE001.pdf",
     "title_bigram_overlap": 6,
-    "title_bigram_ratio": 0.286,
+    "title_bigram_ratio": 0.353,
     "head": "图中国居民平衡膳食餐盘 (二) 控制能量摄入。通过吃动平衡，维持健康体重。每 日膳食总能量以达到或保持健康体重为宜，注意肌肉量的维持。 超重和肥胖人群应控制能量摄入，可根据减重目标，在现有能 量摄入基础上每天减少500kcal左右的能量摄入。 (三) 限制钠的摄入量。每人每日食盐摄入量逐步降至5g 以下，控制高钠食物摄入，增加富含钾的食物摄入，可以选择 低钠盐( 肾病、高钾血症除外)。 (四) 保证新鲜蔬菜和水果摄入量。每日蔬菜摄入不少于 500g, 水果摄入200g~350g。 (五) 减少饱和脂肪酸和胆固醇摄入"
   },
   "LIFE002": {
@@ -161,10 +161,10 @@
     "head": "成人慢性肾脏病食养指南 （2024 年版） 国家卫生健康委办公厅 目 录 一、前言......................................................................................1 二、疾病特点、分期和分型......................................................2 （一）慢性肾脏病定义及分期............................................ 2 （二）"
   },
   "LIFE008": {
-    "registry_title": "居民体重管理核心知识（2024年版）及释义",
+    "registry_title": "居民体重管理核心知识（2024年版）",
     "source": "knowledge/raw/06_lifestyle/LIFE008.pdf",
     "title_bigram_overlap": 15,
-    "title_bigram_ratio": 0.833,
+    "title_bigram_ratio": 1.0,
     "head": "居民体重管理核心知识 （2024 年版） 一、正确认知，重在预防 二、终生管理，持之以恒 三、主动监测，合理评估 四、平衡膳食，总量控制 五、动则有益，贵在坚持 六、良好睡眠，积极心态 七、目标合理，科学减重 八、共同行动，全家健康"
   },
   "PRIM001": {
@@ -190,23 +190,51 @@
   },
   "WHO001": {
     "registry_title": "WHO PEN (Package of essential NCD interventions)",
-    "source": "knowledge/raw/08_who/WHO001.html",
-    "title_bigram_overlap": 34,
-    "title_bigram_ratio": 0.971,
-    "head": "WHO package of essential noncommunicable (PEN) disease interventions for primary health care Skip to main content Global Regions WHO Regional websites When autocomplete results are available use up and down arrows to review and enter to select. Select language"
+    "source": "knowledge/raw/08_who/WHO001.pdf",
+    "title_bigram_overlap": 30,
+    "title_bigram_ratio": 0.857,
+    "head": "WHO PACKAGE OF ESSENTIAL NONCOMMUNICABLE (PEN) DISEASE INTERVENTIONS FOR PRIMARY HEALTH CARE WHO package of essential noncommunicable (PEN) disease interventions for primary health care ISBN 978-92-4-000922-6 (electronic version) ISBN 978-92-4-000923-3 (p"
   },
   "WHO002": {
     "registry_title": "WHO HEARTS: Risk-based CVD Management",
-    "source": "knowledge/raw/08_who/WHO002.html",
-    "title_bigram_overlap": 26,
-    "title_bigram_ratio": 0.867,
-    "head": "HEARTS: Technical package for cardiovascular disease management in primary health care: Risk-based CVD management Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autoco"
+    "source": "knowledge/raw/08_who/WHO002.pdf",
+    "title_bigram_overlap": 19,
+    "title_bigram_ratio": 0.633,
+    "head": "Technical package for cardiovascular disease management in primary health care Risk-based CVD management Technical package for cardiovascular disease management in primary health care Risk-based CVD management"
   },
   "WHO003": {
     "registry_title": "WHO HEARTS: Healthy-lifestyle counselling",
-    "source": "knowledge/raw/08_who/WHO003.html",
-    "title_bigram_overlap": 31,
-    "title_bigram_ratio": 0.939,
-    "head": "HEARTS: Technical package for cardiovascular disease management in primary health care: Healthy-lifestyle counselling Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When au"
+    "source": "knowledge/raw/08_who/WHO003.pdf",
+    "title_bigram_overlap": 24,
+    "title_bigram_ratio": 0.727,
+    "head": "Technical package for cardiovascular disease management in primary health care Healthy-lifestyle counselling Technical package for cardiovascular disease management in primary health care Healthy-lifestyle counselling"
+  },
+  "LIFE001A": {
+    "registry_title": "高血糖症营养和运动指导原则（2024年版）",
+    "source": "knowledge/raw/06_lifestyle/LIFE001A.pdf",
+    "title_bigram_overlap": 2,
+    "title_bigram_ratio": 0.111,
+    "head": "图中国居民平衡膳食餐盘 (二) 控制能量摄入。通过吃动平衡，维持健康体重。每 日膳食总能量以达到或保持健康体重为宜，注意肌肉量的维持。 超重和肥胖人群应控制能量摄入，可根据减重目标，在现有能 量摄入基础上每天减少500kcal左右的能量摄入。 (三) 主食粗细搭配，限制高血糖生成指数(GI) 食物。 膳食碳水化合物供能比占总能量45%~60%,同时注意主食粗细 搭配。多选择较低GI的食物，提高主食全谷物和杂豆的摄入量， 以占主食的一半为好；限制高GI食物摄入，并注意控制膳食升 糖负荷(GL)。 (四) 增加膳食纤维"
+  },
+  "LIFE001B": {
+    "registry_title": "高脂血症营养和运动指导原则（2024年版）",
+    "source": "knowledge/raw/06_lifestyle/LIFE001B.pdf",
+    "title_bigram_overlap": 2,
+    "title_bigram_ratio": 0.111,
+    "head": "图中国居民平衡膳食餐盘 (二) 控制能量摄入。通过吃动平衡，维持健康体重。每 日膳食总能量以达到或保持健康体重为宜，注意肌肉量的维持。 超重和肥胖人群应控制能量摄入，可根据减重目标，在现有能 量摄入基础上每天减少500kcal左右的能量摄入。 (三) 控制脂肪总量，少油烹饪。以脂肪摄入量占总能量 20%~25%为宜，每日烹调油不超过25g。 (四) 选好脂肪来源，减少饱和脂肪酸。以饱和脂肪酸摄 入供能比不超过总能量10%为宜；尽量避免反式脂肪酸摄入； 提高不饱和脂肪酸的摄入比例，特别是富含n-3系列多不饱和脂 肪酸"
+  },
+  "LIFE001C": {
+    "registry_title": "高尿酸血症营养和运动指导原则（2024年版）",
+    "source": "knowledge/raw/06_lifestyle/LIFE001C.pdf",
+    "title_bigram_overlap": 1,
+    "title_bigram_ratio": 0.053,
+    "head": "图中国居民平衡膳食餐盘 (二) 控制能量摄入。通过吃动平衡，维持健康体重。每 日膳食总能量以达到或保持健康体重为宜，注意肌肉量的维持。 超重和肥胖人群应控制能量摄入，可根据减重目标，在现有能 量摄入基础上每天减少500kcal左右的能量摄入。 (三) 避免食用高嘌呤食物。限制猪脑、带鱼、动物内脏 等高嘌呤食物摄入；高嘌呤植物性食物煮后弃汤可减少嘌呤量。 (四) 提倡较低血糖生成指数(GI) 的谷类食物。每日全 谷物食物占主食量的1/3~1/2, 膳食纤维摄入量达到25g~30g。 (五) 适量摄入奶及乳制品，限制摄"
+  },
+  "LIFE008A": {
+    "registry_title": "居民体重管理核心知识（2024年版）释义",
+    "source": "knowledge/raw/06_lifestyle/LIFE008A.pdf",
+    "title_bigram_overlap": 17,
+    "title_bigram_ratio": 1.0,
+    "head": "居民体重管理核心知识（2024 年版）释义 一、正确认知，重在预防 体重是客观评价人体营养和健康状况的重要指标,体重 过高或过低都会对健康造成不利影响。 超重和肥胖是糖尿病、高血压等心脑血管疾病、部分癌 症等疾病的重要危险因素。儿童期肥胖会影响儿童的运动能 力和骨骼发育，对行为、认知及智力等也会产生不良影响。 消瘦与生长迟缓、免疫功能下降、内分泌失调、骨量下降等 相关，同样危害身体健康。同时，儿童青少年肥胖可持续至 成年期，增加多种慢性病的发病风险，加重医疗及社会经济 负担。 应坚持预防为主的原则，通过合理饮食、科"
   }
 }

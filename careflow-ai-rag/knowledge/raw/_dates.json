@@ -193,20 +193,48 @@
     "pattern": "",
     "effective_date": "",
     "effective_pattern": "",
-    "source": "knowledge/raw/08_who/WHO001.html"
+    "source": "knowledge/raw/08_who/WHO001.pdf"
   },
   "WHO002": {
     "publish_date": "",
     "pattern": "",
     "effective_date": "",
     "effective_pattern": "",
-    "source": "knowledge/raw/08_who/WHO002.html"
+    "source": "knowledge/raw/08_who/WHO002.pdf"
   },
   "WHO003": {
     "publish_date": "",
     "pattern": "",
     "effective_date": "",
     "effective_pattern": "",
-    "source": "knowledge/raw/08_who/WHO003.html"
+    "source": "knowledge/raw/08_who/WHO003.pdf"
+  },
+  "LIFE001A": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE001A.pdf"
+  },
+  "LIFE001B": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE001B.pdf"
+  },
+  "LIFE001C": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE001C.pdf"
+  },
+  "LIFE008A": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE008A.pdf"
   }
 }

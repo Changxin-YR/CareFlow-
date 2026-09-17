@@ -3,14 +3,14 @@
   "errors": [],
   "warnings": [],
   "checks": {
-    "rows": 30,
-    "active": 27,
-    "draft": 3,
-    "distinct_document_ids": 30,
+    "rows": 34,
+    "active": 28,
+    "draft": 6,
+    "distinct_document_ids": 34,
     "bom": 1,
     "errors": 0,
     "warnings": 0
   },
-  "rows": 30,
+  "rows": 34,
   "manifest": "C:\\Users\\27363\\Desktop\\大健康\\careflow-ai-rag\\knowledge\\manifest\\knowledge_manifest.csv"
 }

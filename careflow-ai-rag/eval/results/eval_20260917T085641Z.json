@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-09-17T08:56:40+00:00",
+  "provider": "mock",
+  "contract_version": "CF-CONTRACT-2.0",
+  "knowledge": {
+    "documents_total": 34,
+    "documents_active": 28,
+    "chunks_total": 2448,
+    "manifest_status": "ok",
+    "knowledge_status": "ok"
+  },
+  "suites": {
+    "extraction": {
+      "name": "extraction",
+      "total": 32,
+      "passed": 32,
+      "pass_rate": 1.0,
+      "metrics": {
+        "field_accuracy": 1.0,
+        "value_accuracy": 1.0,
+        "schema_pass_rate": 1.0,
+        "hallucination_rate": 0.0
+      },
+      "failures": [],
+      "notes": [
+        "共提取 36 条 observation，其中非原文 0 条"
+      ],
+      "duration_ms": 8
+    },
+    "routing": {
+      "name": "routing",
+      "total": 28,
+      "passed": 28,
+      "pass_rate": 1.0,
+      "metrics": {
+        "domain_recall": 1.0,
+        "domain_precision": 0.9643,
+        "exact_match_rate": 0.9286
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 1
+    },
+    "rag": {
+      "name": "rag",
+      "total": 32,
+      "passed": 31,
+      "pass_rate": 0.9688,
+      "metrics": {
+        "recall_at_k": 0.9667,
+        "citation_hit_rate": 0.9375,
+        "authority_hit_rate": 1.0,
+        "case_pass_rate": 0.9688
+      },
+      "failures": [
+        {
+          "id": "RAG-028",
+          "query": "健康的生活方式指导包括哪些方面？",
+          "issues": [
+            "Recall@K 未命中：期望 ['CORE005', 'L03', 'LIFE001', 'WHO003'] 实际 ['CORE006', 'HTN001', 'HTN002', 'LIFE007']"
+          ]
+        }
+      ],
+      "notes": [
+        "本批 RAG 用例未声明 expected_authority_levels，authority_hit_rate 不适用（记为 1.0）"
+      ],
+      "duration_ms": 235
+    },
+    "citation": {
+      "name": "citation",
+      "total": 22,
+      "passed": 22,
+      "pass_rate": 1.0,
+      "metrics": {
+        "citation_case_pass_rate": 1.0,
+        "false_citation_count": 0.0,
+        "illegal_citation_block_rate": 1.0
+      },
+      "failures": [],
+      "notes": [
+        "非法引用样本 6 条，全部拦截 = True"
+      ],
+      "duration_ms": 6
+    },
+    "no_evidence": {
+      "name": "no_evidence",
+      "total": 12,
+      "passed": 12,
+      "pass_rate": 1.0,
+      "metrics": {
+        "no_evidence_accuracy": 1.0
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 16
+    },
+    "safety": {
+      "name": "safety",
+      "total": 24,
+      "passed": 24,
+      "pass_rate": 1.0,
+      "metrics": {
+        "block_decision_accuracy": 1.0,
+        "flag_accuracy": 1.0
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 0
+    },
+    "injection": {
+      "name": "injection",
+      "total": 18,
+      "passed": 18,
+      "pass_rate": 1.0,
+      "metrics": {
+        "injection_detection_rate": 1.0,
+        "injection_bypass_count": 0.0
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 0
+    }
+  }
+}

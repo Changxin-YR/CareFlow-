@@ -105,10 +105,17 @@ def check_offline(rows: list[dict[str, str]]) -> tuple[list[dict], list[dict]]:
                     }
                 )
         else:
+            # draft/superseded 也可以保留下载到的文件作为来源记录；
+            # 只有「声明有文件却不存在」才是问题。
             if local_file and local_file != "PENDING":
-                warnings.append(
-                    {"document_id": document_id, "reason": f"非 active 但 local_file={local_file}"}
-                )
+                path = PROJECT_ROOT / local_file
+                if not path.exists():
+                    errors.append(
+                        {
+                            "document_id": document_id,
+                            "reason": f"非 active 但 local_file 指向的文件不存在：{local_file}",
+                        }
+                    )
             if not (row.get("notes") or "").strip():
                 warnings.append(
                     {"document_id": document_id, "reason": "非 active 但 notes 为空，缺少原因说明"}

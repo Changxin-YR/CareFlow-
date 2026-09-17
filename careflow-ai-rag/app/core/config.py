@@ -168,6 +168,8 @@ class Settings:
     #: 原始 BM25 分低于该值，或命中词数不足，则判定为"无证据"
     rag_min_relevance_score: float = 12.0
     rag_min_matched_terms: int = 3
+    #: 查询词覆盖率下限（matched / 可用查询词数）。可用查询词 = 语料中 IDF>0 的词。
+    rag_min_term_coverage: float = 0.8
     rag_enable_llm_router: bool = True
 
     # --- HTTP 客户端 ---
@@ -219,6 +221,7 @@ class Settings:
             "rag_top_k": self.rag_top_k,
             "rag_min_relevance_score": self.rag_min_relevance_score,
             "rag_min_matched_terms": self.rag_min_matched_terms,
+            "rag_min_term_coverage": self.rag_min_term_coverage,
             "rag_max_context_chars": self.rag_max_context_chars,
             "rag_enable_llm_router": self.rag_enable_llm_router,
             "request_timeout_seconds": self.request_timeout_seconds,
@@ -252,6 +255,7 @@ def _build_settings() -> Settings:
         rag_score_threshold=_float("RAG_SCORE_THRESHOLD", 0.0),
         rag_min_relevance_score=_float("RAG_MIN_RELEVANCE_SCORE", 12.0),
         rag_min_matched_terms=max(1, _int("RAG_MIN_MATCHED_TERMS", 3)),
+        rag_min_term_coverage=min(1.0, max(0.0, _float("RAG_MIN_TERM_COVERAGE", 0.8))),
         rag_enable_llm_router=_bool("RAG_ENABLE_LLM_ROUTER", True),
         request_timeout_seconds=max(1, _int("REQUEST_TIMEOUT_SECONDS", 20)),
         max_retries=min(2, max(0, _int("MAX_RETRIES", 1))),

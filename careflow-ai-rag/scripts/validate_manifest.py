@@ -137,12 +137,20 @@ def validate(manifest: Path) -> dict:
                         bad("status=active but sha256 is empty")
                     elif actual != sha:
                         bad(f"sha256 mismatch for {local}: manifest={sha[:12]}... actual={actual[:12]}...")
-        elif status == "superseded":
-            if local != "PENDING" and local and not (S.PROJECT_ROOT / local).exists():
-                bad(f"status=superseded but local_file missing: {local}")
         else:
-            if sha:
-                bad(f"status={status} but sha256 is not empty")
+            # 非 active（superseded / draft / disabled）：
+            # 契约只说 local_file「允许」为 PENDING、sha256「允许」为空，
+            # 并未要求必须为空。这里允许保留已下载文件作为来源记录，
+            # 但声明了就必须真实存在、哈希必须对得上 —— 比原来更严格。
+            if local and local != "PENDING":
+                p = S.PROJECT_ROOT / local
+                if not p.exists():
+                    bad(f"status={status} but local_file does not exist: {local}")
+                elif sha and sha256_file(p) != sha:
+                    bad(
+                        f"status={status} sha256 mismatch for {local}: "
+                        f"manifest={sha[:12]}... actual={sha256_file(p)[:12]}..."
+                    )
 
         if len(sha) not in (0, 64):
             bad(f"sha256 length {len(sha)} is not 64")

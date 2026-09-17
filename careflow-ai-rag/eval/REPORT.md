@@ -1,9 +1,9 @@
 # CareFlow 康脉智护 —— Eval 报告
 
-- 生成时间（UTC）：`2026-09-17T07:21:37+00:00`
+- 生成时间（UTC）：`2026-09-17T08:59:54+00:00`
 - AI Provider：`mock`
 - 契约版本：`CF-CONTRACT-2.0`
-- 知识库：30 篇（active 27）／1041 个切片
+- 知识库：34 篇（active 28）／2448 个切片
 
 > 说明：本报告**不包含任何「医学准确率」指标**。评测只覆盖
 > 可客观判定的工程指标（提取字段/数值、路由召回、检索命中、
@@ -43,7 +43,7 @@
 
 ### rag
 
-- 用例 32 条，通过 31 条，耗时 166 ms
+- 用例 32 条，通过 31 条，耗时 231 ms
 - `recall_at_k` = **0.9667**
 - `citation_hit_rate` = **0.9375**
 - `authority_hit_rate` = **1.0**
@@ -54,7 +54,7 @@
 
 ### citation
 
-- 用例 22 条，通过 22 条，耗时 5 ms
+- 用例 22 条，通过 22 条，耗时 4 ms
 - `citation_case_pass_rate` = **1.0**
 - `false_citation_count` = **0.0**
 - `illegal_citation_block_rate` = **1.0**
@@ -63,7 +63,7 @@
 
 ### no_evidence
 
-- 用例 12 条，通过 12 条，耗时 10 ms
+- 用例 12 条，通过 12 条，耗时 16 ms
 - `no_evidence_accuracy` = **1.0**
 - 失败：0
 
@@ -83,4 +83,4 @@
 
 ## 3. 原始结果
 
-完整逐条结果见 `eval/results/eval_20260917T072138Z.json`。
+完整逐条结果见 `eval/results/eval_20260917T085954Z.json`。
