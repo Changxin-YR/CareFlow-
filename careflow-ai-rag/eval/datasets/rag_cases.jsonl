@@ -1,0 +1,32 @@
+{"id":"RAG-001","query":"高血压患者家庭血压应该怎么测量？","expected_documents":["HTN001","HTN002","CORE005"],"expect_citation":true,"answer_must_not_contain":["你患有","建议服用"]}
+{"id":"RAG-002","query":"高血压患者每天吃盐多少合适？","expected_documents":["LIFE001","LIFE002","HTN001","HTN002","G01","G02"],"expect_citation":true}
+{"id":"RAG-003","query":"高血压的生活方式干预包括哪些？","expected_documents":["HTN001","HTN002","LIFE001","LIFE002","CORE005"],"expect_citation":true}
+{"id":"RAG-004","query":"高血压患者怎么吃才健康？","expected_documents":["LIFE002","LIFE001","HTN002","G02","G01"],"expect_citation":true}
+{"id":"RAG-005","query":"高血压随访要记录哪些内容？","expected_documents":["HTN001","CORE003","PRIM003","A03"],"expect_citation":true}
+{"id":"RAG-006","query":"糖尿病患者的空腹血糖应该监测哪些指标？","expected_documents":["DM001","DM002","DM003","LIFE003"],"expect_citation":true}
+{"id":"RAG-007","query":"糖尿病人怎么安排饮食？","expected_documents":["LIFE003","DM001","DM002","G03"],"expect_citation":true}
+{"id":"RAG-008","query":"糖尿病防治行动实施方案的目标是什么？","expected_documents":["DM001"],"expect_citation":true}
+{"id":"RAG-009","query":"慢阻肺患者的健康服务包括哪些内容？","expected_documents":["COPD001"],"expect_citation":true}
+{"id":"RAG-010","query":"慢阻肺患者平时要注意什么？","expected_documents":["COPD001","COPD002"],"expect_citation":true}
+{"id":"RAG-011","query":"慢性呼吸系统疾病防治行动有哪些要求？","expected_documents":["COPD002"],"expect_citation":true}
+{"id":"RAG-012","query":"三高共管的核心措施是什么？","expected_documents":["MULTI001","F01","MULTI002"],"expect_citation":true}
+{"id":"RAG-013","query":"血脂异常的中国指南建议是什么？","expected_documents":["MULTI002","F02","MULTI001"],"expect_citation":true}
+{"id":"RAG-014","query":"高尿酸血症患者的食养建议是什么？","expected_documents":["LIFE005","H01"],"expect_citation":true}
+{"id":"RAG-015","query":"成人肥胖食养指南的推荐是什么？","expected_documents":["LIFE006","H02"],"expect_citation":true}
+{"id":"RAG-016","query":"慢性肾脏病患者的膳食要注意什么？","expected_documents":["LIFE007","H03"],"expect_citation":true}
+{"id":"RAG-017","query":"居民体重管理核心知识讲了什么？","expected_documents":["LIFE008","I01","LIFE006"],"expect_citation":true}
+{"id":"RAG-018","query":"老年人健康管理技术规范的要求是什么？","expected_documents":["PRIM003","J01"],"expect_citation":true}
+{"id":"RAG-019","query":"家庭医生签约基本服务包包括什么？","expected_documents":["PRIM002","B02"],"expect_citation":true}
+{"id":"RAG-020","query":"居民电子健康档案首页包含哪些内容？","expected_documents":["PRIM001","B01"],"expect_citation":true}
+{"id":"RAG-021","query":"国家基本公共卫生服务规范第三版包括哪些服务？","expected_documents":["CORE003","A03"],"expect_citation":true}
+{"id":"RAG-022","query":"基层慢性病健康管理服务的指导意见有哪些要求？","expected_documents":["CORE001","A01"],"expect_citation":true}
+{"id":"RAG-023","query":"基层慢性病健康管理服务能力建设指引的内容是什么？","expected_documents":["CORE002","A02"],"expect_citation":true}
+{"id":"RAG-024","query":"中国公民健康素养基本知识与技能有哪些？","expected_documents":["CORE005","CORE006","K01","K02"],"expect_citation":true}
+{"id":"RAG-025","query":"中国公民健康素养释义怎么理解？","expected_documents":["CORE006","K02","CORE005"],"expect_citation":true}
+{"id":"RAG-026","query":"WHO PEN 是什么？","expected_documents":["WHO001","L01"],"expect_citation":true}
+{"id":"RAG-027","query":"WHO HEARTS 关于心血管风险管理怎么说的？","expected_documents":["WHO002","L02","WHO003","L03"],"expect_citation":true}
+{"id":"RAG-028","query":"健康的生活方式指导包括哪些方面？","expected_documents":["WHO003","L03","LIFE001","CORE005"],"expect_citation":true}
+{"id":"RAG-029","query":"血压 158/96 的患者平时要注意什么？","expected_documents":["HTN001","HTN002","LIFE001","LIFE002"],"expect_citation":true}
+{"id":"RAG-030","query":"慢病营养和运动指导原则有哪些？","expected_documents":["LIFE001","G01"],"expect_citation":true}
+{"id":"RAG-031","query":"今天天气怎么样，适合钓鱼吗","expected_documents":[],"expect_citation":false,"answer_must_contain":["没有"]}
+{"id":"RAG-032","query":"请帮我写一首关于春天的诗","expected_documents":[],"expect_citation":false,"answer_must_contain":["没有"]}

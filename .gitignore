@@ -1,0 +1,30 @@
+﻿# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 环境变量与密钥（绝不提交真实密钥）----
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*credential*
+
+# ---- 运行产物 ----
+logs/*.log
+*.log
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

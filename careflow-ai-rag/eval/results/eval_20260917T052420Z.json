@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026-09-17T05:24:20+00:00",
+  "provider": "mock",
+  "contract_version": "CF-CONTRACT-2.0",
+  "knowledge": {
+    "documents_total": 0,
+    "documents_active": 0,
+    "chunks_total": 0,
+    "manifest_status": "missing",
+    "knowledge_status": "missing"
+  },
+  "suites": {
+    "citation": {
+      "name": "citation",
+      "total": 22,
+      "passed": 7,
+      "pass_rate": 0.3182,
+      "metrics": {
+        "citation_case_pass_rate": 0.3182,
+        "false_citation_count": 16.0,
+        "illegal_citation_block_rate": 1.0
+      },
+      "failures": [
+        {
+          "id": "CIT-001",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-002",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-003",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-008",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-009",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-010",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-011",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-012",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-013",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-014",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-015",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-017",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-018",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest",
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-021",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        },
+        {
+          "id": "CIT-022",
+          "issues": [
+            "产出了不可验证引用：document_not_in_manifest"
+          ]
+        }
+      ],
+      "notes": [
+        "非法引用样本 6 条，全部拦截 = True"
+      ],
+      "duration_ms": 20
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-09-17T07:29:37+00:00",
+  "script": "scripts/build_chunks.py",
+  "params": {
+    "target_min_chars": 500,
+    "target_max_chars": 900,
+    "hard_max_chars": 1200,
+    "overlap_chars": 120,
+    "overlap_min_chars": 80,
+    "split_boundary": "heading/paragraph/table-row only; never inside a clause or table row",
+    "content_policy": "verbatim contiguous slice of knowledge/processed/<id>.md"
+  },
+  "chunks_total": 1041,
+  "chunks_per_document": {
+    "CORE001": 5,
+    "CORE002": 1,
+    "CORE003": 151,
+    "CORE004": 4,
+    "CORE005": 3,
+    "CORE006": 70,
+    "HTN001": 7,
+    "HTN002": 57,
+    "HTN003": 6,
+    "DM001": 9,
+    "COPD001": 10,
+    "COPD002": 6,
+    "MULTI002": 222,
+    "LIFE001": 2,
+    "LIFE002": 62,
+    "LIFE003": 74,
+    "LIFE004": 42,
+    "LIFE005": 81,
+    "LIFE006": 95,
+    "LIFE007": 103,
+    "LIFE008": 1,
+    "PRIM001": 8,
+    "PRIM002": 12,
+    "PRIM003": 1,
+    "WHO001": 2,
+    "WHO002": 3,
+    "WHO003": 4
+  },
+  "chunks_per_kb": {
+    "KB_CORE": 234,
+    "KB_HTN": 70,
+    "KB_DM": 9,
+    "KB_COPD": 16,
+    "KB_MULTIMORBIDITY": 222,
+    "KB_LIFESTYLE": 460,
+    "KB_PRIMARYCARE": 21,
+    "KB_WHO": 9
+  },
+  "documents_chunked": 27,
+  "documents_without_source": [
+    "DM002",
+    "DM003",
+    "MULTI001"
+  ],
+  "skipped": [],
+  "verification": {
+    "verbatim_problems": []
+  },
+  "size_stats": {
+    "min": 9,
+    "max": 1109,
+    "mean": 596.8,
+    "under_min": 93,
+    "over_max": 31
+  }
+}

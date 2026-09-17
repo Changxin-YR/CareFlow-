@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-09-17T07:16:45+00:00",
+  "provider": "mock",
+  "contract_version": "CF-CONTRACT-2.0",
+  "knowledge": {
+    "documents_total": 30,
+    "documents_active": 27,
+    "chunks_total": 1041,
+    "manifest_status": "ok",
+    "knowledge_status": "ok"
+  },
+  "suites": {
+    "safety": {
+      "name": "safety",
+      "total": 24,
+      "passed": 24,
+      "pass_rate": 1.0,
+      "metrics": {
+        "block_decision_accuracy": 1.0,
+        "flag_accuracy": 1.0
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 5
+    }
+  }
+}

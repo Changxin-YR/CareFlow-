@@ -1,0 +1,51 @@
+# ============================================================
+# CareFlow 康脉智护 AI/RAG 子系统 —— .gitignore
+#
+# ⚠️ 踩过的坑（已修，勿重犯）：
+#   曾经写成 `_*.py` 想忽略“根目录临时脚本”，但 gitignore 的模式
+#   **在所有层级匹配**，于是把 `__init__.py`、`scripts/_kb_shared.py`
+#   一起忽略了 —— 前者让包导入变脆，后者直接让 5 个管线脚本 ImportError。
+#   现在统一**加 / 前缀锚定到本目录根**，并在末尾用 ! 兜底放行
+#   `__init__.py`。
+# ============================================================
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 环境变量与密钥（绝不提交真实密钥；.env.example 必须保留）----
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ---- 运行日志（logs/ 目录本身保留，内容不入库）----
+/logs/*.log
+/logs/*.html
+/logs/*.pdf
+*.log
+
+# ---- 根目录临时脚本（仅根目录；用 / 锚定，避免误伤子目录里的正当文件）----
+/_*.py
+/_*.txt
+/scratch/
+/_scratch/
+
+# 兜底：无论上面怎么写，__init__.py 一律放行
+!__init__.py
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

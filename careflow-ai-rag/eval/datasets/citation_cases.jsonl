@@ -1,0 +1,22 @@
+{"id":"CIT-001","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"真实命中内容"}],"expected_citation_document_ids":["HTN001"]}
+{"id":"CIT-002","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"内容甲"},{"chunk_id":"DM001-0001","document_id":"DM001","content":"内容乙"}],"used_markers":[2],"expected_citation_document_ids":["DM001"]}
+{"id":"CIT-003","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"内容"}],"used_chunk_ids":["HTN001-0001"],"expected_citation_document_ids":["HTN001"]}
+{"id":"CIT-004","hits":[{"chunk_id":"FAKE-1","document_id":"NOT_A_DOC","content":"编造"}],"expected_citation_document_ids":[],"expected_drop_reasons":["document_not_in_manifest"],"must_be_rejected":true}
+{"id":"CIT-005","hits":[{"chunk_id":"COPD900-0001","document_id":"COPD900","content":"已作废"}],"expected_citation_document_ids":[],"expected_drop_reasons":["document_not_active"],"must_be_rejected":true}
+{"id":"CIT-006","hits":[{"chunk_id":"C-1","document_id":"","content":"没有文档 ID"}],"expected_citation_document_ids":[],"expected_drop_reasons":["missing_document_id"],"must_be_rejected":true}
+{"id":"CIT-007","hits":[{"chunk_id":"HTN001-0001","document_id":"DM001","content":"张冠李戴"}],"expected_citation_document_ids":[],"expected_drop_reasons":["chunk_document_mismatch"],"must_be_rejected":true}
+{"id":"CIT-008","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"内容"}],"used_chunk_ids":["NOT-RETRIEVED-1"],"expected_citation_document_ids":["HTN001"],"expected_drop_reasons":["chunk_not_retrieved_this_round"]}
+{"id":"CIT-009","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"内容"}],"used_markers":[9],"expected_citation_document_ids":["HTN001"],"expected_drop_reasons":["marker_out_of_range"]}
+{"id":"CIT-010","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"同一段真实内容"}],"expected_citation_document_ids":["HTN001"]}
+{"id":"CIT-011","hits":[{"chunk_id":"DM001-0001","document_id":"DM001","content":"血糖监测内容"}],"expected_citation_document_ids":["DM001"]}
+{"id":"CIT-012","hits":[{"chunk_id":"LIFE001-0001","document_id":"LIFE001","content":"食养内容"}],"expected_citation_document_ids":["LIFE001"]}
+{"id":"CIT-013","hits":[{"chunk_id":"PRIM001-0001","document_id":"PRIM001","content":"健康档案内容"}],"expected_citation_document_ids":["PRIM001"]}
+{"id":"CIT-014","hits":[{"chunk_id":"COPD901-0001","document_id":"COPD901","content":"现行慢阻肺内容"}],"expected_citation_document_ids":["COPD901"]}
+{"id":"CIT-015","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"A"},{"chunk_id":"NOT_A_DOC-1","document_id":"NOT_A_DOC","content":"B"}],"used_markers":[1],"expected_citation_document_ids":["HTN001"]}
+{"id":"CIT-016","hits":[],"expected_citation_document_ids":[]}
+{"id":"CIT-017","hits":[{"chunk_id":"HTN001-0002","document_id":"HTN001","content":"生活方式干预内容"}],"expected_citation_document_ids":["HTN001"]}
+{"id":"CIT-018","hits":[{"chunk_id":"DM001-0001","document_id":"DM001","content":"x"},{"chunk_id":"LIFE001-0001","document_id":"LIFE001","content":"y"}],"used_markers":[1,2],"expected_citation_document_ids":["DM001","LIFE001"]}
+{"id":"CIT-019","hits":[{"chunk_id":"UNKNOWN-9","document_id":"UNKNOWN_DOC","content":"伪造文档"}],"expected_citation_document_ids":[],"expected_drop_reasons":["document_not_in_manifest"],"must_be_rejected":true}
+{"id":"CIT-020","hits":[{"chunk_id":"COPD900-0001","document_id":"COPD900","content":"作废文档不可引用"}],"expected_citation_document_ids":[],"expected_drop_reasons":["document_not_active"],"must_be_rejected":true}
+{"id":"CIT-021","hits":[{"chunk_id":"HTN001-0001","document_id":"HTN001","content":"真实内容"},{"chunk_id":"NOT_A_DOC-1","document_id":"NOT_A_DOC","content":"假内容"}],"used_markers":[1],"expected_citation_document_ids":["HTN001"]}
+{"id":"CIT-022","hits":[{"chunk_id":"PRIM003-0001","document_id":"PRIM003","content":"老年健康管理内容"}],"expected_citation_document_ids":["PRIM003"]}

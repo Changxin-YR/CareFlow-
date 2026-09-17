@@ -1,0 +1,7 @@
+# CareFlow 康脉智护 AI Gateway —— 运行时依赖（最小集合，Docker 镜像只装这些）
+fastapi>=0.110,<1.0
+uvicorn>=0.27
+pydantic>=2.6,<3.0
+httpx>=0.27
+python-dotenv>=1.0
+PyYAML>=6.0

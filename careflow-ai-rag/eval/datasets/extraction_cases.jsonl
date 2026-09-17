@@ -1,0 +1,32 @@
+{"id":"EXT-001","text":"今天早上血压158/96","expected":[{"type":"BLOOD_PRESSURE","value":{"systolic":158,"diastolic":96}}]}
+{"id":"EXT-002","text":"刚量的血压 128/78，感觉还可以","expected":[{"type":"BLOOD_PRESSURE","value":{"systolic":128,"diastolic":78}}]}
+{"id":"EXT-003","text":"高压150，低压95","expected":[{"type":"BLOOD_PRESSURE","value":{"systolic":150,"diastolic":95}}]}
+{"id":"EXT-004","text":"早上空腹血糖7.2","expected":[{"type":"BLOOD_GLUCOSE","value":{"value":7.2}}]}
+{"id":"EXT-005","text":"餐后两小时血糖11.5","expected":[{"type":"BLOOD_GLUCOSE","value":{"value":11.5}}]}
+{"id":"EXT-006","text":"昨天测的血糖6.4","expected":[{"type":"BLOOD_GLUCOSE","value":{"value":6.4}}]}
+{"id":"EXT-007","text":"上周查糖化血红蛋白7.8%","expected":[{"type":"HBA1C","value":{"value":7.8}}]}
+{"id":"EXT-008","text":"体重72.5公斤","expected":[{"type":"WEIGHT","value":{"value":72.5}}]}
+{"id":"EXT-009","text":"身高168","expected":[{"type":"HEIGHT","value":{"value":168}}]}
+{"id":"EXT-010","text":"BMI 25.6","expected":[{"type":"BMI","value":{"value":25.6}}]}
+{"id":"EXT-011","text":"腰围98cm","expected":[{"type":"WAIST","value":{"value":98}}]}
+{"id":"EXT-012","text":"心率92","expected":[{"type":"HEART_RATE","value":{"value":92}}]}
+{"id":"EXT-013","text":"血氧饱和度93%","expected":[{"type":"BLOOD_OXYGEN","value":{"value":93}}]}
+{"id":"EXT-014","text":"体温36.9","expected":[{"type":"BODY_TEMPERATURE","value":{"value":36.9}}]}
+{"id":"EXT-015","text":"尿酸520","expected":[{"type":"URIC_ACID","value":{"value":520}}]}
+{"id":"EXT-016","text":"最近总是头晕","expected":[{"type":"SYMPTOM","value":{"name":"头晕"}}]}
+{"id":"EXT-017","text":"这两天有点胸闷","expected":[{"type":"SYMPTOM","value":{"name":"胸闷"}}]}
+{"id":"EXT-018","text":"咳嗽有痰已经一周了","expected":[{"type":"SYMPTOM","value":{"name":"咳嗽"}}]}
+{"id":"EXT-019","text":"夜里经常气促，睡不好","expected":[{"type":"SYMPTOM","value":{"name":"气促"}}]}
+{"id":"EXT-020","text":"在吃硝苯地平30mg每天一次","expected":[{"type":"MEDICATION","value":{"name":"硝苯地平"}}]}
+{"id":"EXT-021","text":"服用二甲双胍片0.5g bid","expected":[{"type":"MEDICATION","value":{"name":"二甲双胍片"}}]}
+{"id":"EXT-022","text":"抽烟，每天20支","expected":[{"type":"SMOKING"}]}
+{"id":"EXT-023","text":"平时应酬喝酒比较多","expected":[{"type":"ALCOHOL"}]}
+{"id":"EXT-024","text":"每天散步30分钟","expected":[{"type":"EXERCISE"}]}
+{"id":"EXT-025","text":"口味偏咸，喜欢吃腌菜","expected":[{"type":"DIET"}]}
+{"id":"EXT-026","text":"睡眠6小时","expected":[{"type":"SLEEP","value":{"hours":6.0}}]}
+{"id":"EXT-027","text":"最近经常漏服","expected":[{"type":"ADHERENCE"}]}
+{"id":"EXT-028","text":"下个月要去复诊","expected":[{"type":"FOLLOWUP_EVENT"}]}
+{"id":"EXT-029","text":"血压158/96，空腹血糖7.2，有点头晕","expected":[{"type":"BLOOD_PRESSURE","value":{"systolic":158,"diastolic":96}},{"type":"BLOOD_GLUCOSE","value":{"value":7.2}},{"type":"SYMPTOM","value":{"name":"头晕"}}]}
+{"id":"EXT-030","text":"没有头晕，也没有胸闷，血压130/85","expected":[{"type":"BLOOD_PRESSURE","value":{"systolic":130,"diastolic":85}}]}
+{"id":"EXT-031","text":"血压偏高，头晕，医生说要注意饮食","expected":[{"type":"SYMPTOM","value":{"name":"头晕"}}]}
+{"id":"EXT-032","text":"体重70公斤，身高170，最近想减重","expected":[{"type":"WEIGHT","value":{"value":70}},{"type":"HEIGHT","value":{"value":170}}]}

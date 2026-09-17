@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-09-17T05:45:08+00:00",
+  "script": "scripts/download_attachments.py",
+  "documents": [
+    {
+      "document_id": "LIFE002",
+      "page_url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d.shtml",
+      "keyword": "成人高血压食养指南",
+      "pdf_url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE002.pdf",
+      "status": "skipped",
+      "bytes": 1901025
+    },
+    {
+      "document_id": "LIFE003",
+      "page_url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d.shtml",
+      "keyword": "成人糖尿病食养指南",
+      "pdf_url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE003.pdf",
+      "status": "skipped",
+      "bytes": 2080383
+    },
+    {
+      "document_id": "LIFE004",
+      "page_url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d.shtml",
+      "keyword": "成人高脂血症食养指南",
+      "pdf_url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE004.pdf",
+      "status": "skipped",
+      "bytes": 1527887
+    },
+    {
+      "document_id": "LIFE005",
+      "page_url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d.shtml",
+      "keyword": "成人高尿酸血症与痛风食养指南",
+      "pdf_url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE005.pdf",
+      "status": "skipped",
+      "bytes": 15896639
+    },
+    {
+      "document_id": "LIFE006",
+      "page_url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d.shtml",
+      "keyword": "成人肥胖食养指南",
+      "pdf_url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE006.pdf",
+      "status": "skipped",
+      "bytes": 16041248
+    },
+    {
+      "document_id": "LIFE007",
+      "page_url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d.shtml",
+      "keyword": "成人慢性肾脏病食养指南",
+      "pdf_url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE007.pdf",
+      "status": "skipped",
+      "bytes": 1136038
+    },
+    {
+      "document_id": "WHO001",
+      "landing": "WHO001.html",
+      "pdf_url": "https://iris.who.int/bitstream/handle/10665/334186/9789240009226-eng.pdf",
+      "local_file": "knowledge/raw/08_who/WHO001.pdf",
+      "status": "failed",
+      "http_status": 200,
+      "error": "非 PDF 或过小（755 bytes）"
+    },
+    {
+      "document_id": "WHO002",
+      "landing": "WHO002.html",
+      "pdf_url": "https://iris.who.int/bitstream/handle/10665/341077/9789240021367-eng.pdf",
+      "local_file": "knowledge/raw/08_who/WHO002.pdf",
+      "status": "failed",
+      "http_status": 200,
+      "error": "非 PDF 或过小（755 bytes）"
+    },
+    {
+      "document_id": "WHO003",
+      "landing": "WHO003.html",
+      "pdf_url": "https://iris.who.int/bitstream/handle/10665/312273/WHO-NMH-NVI-18.1-eng.pdf",
+      "local_file": "knowledge/raw/08_who/WHO003.pdf",
+      "status": "failed",
+      "http_status": 200,
+      "error": "非 PDF 或过小（755 bytes）"
+    }
+  ],
+  "summary": {
+    "skipped": 6,
+    "failed": 3
+  }
+}

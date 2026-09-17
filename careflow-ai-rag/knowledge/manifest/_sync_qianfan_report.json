@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-09-17T07:16:45+00:00",
+  "mode": "dry_run",
+  "base_url": "https://qianfan.baidubce.com",
+  "knowledge_bases": [
+    {
+      "kb": "KB_CORE",
+      "kb_id": "",
+      "documents": 6,
+      "chars": 135282,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_HTN",
+      "kb_id": "",
+      "documents": 3,
+      "chars": 42026,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_DM",
+      "kb_id": "",
+      "documents": 1,
+      "chars": 6688,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_COPD",
+      "kb_id": "",
+      "documents": 2,
+      "chars": 10236,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_MULTIMORBIDITY",
+      "kb_id": "",
+      "documents": 1,
+      "chars": 129717,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_LIFESTYLE",
+      "kb_id": "",
+      "documents": 8,
+      "chars": 272723,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_PRIMARYCARE",
+      "kb_id": "",
+      "documents": 3,
+      "chars": 14131,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    },
+    {
+      "kb": "KB_WHO",
+      "kb_id": "",
+      "documents": 3,
+      "chars": 6693,
+      "missing_text": [],
+      "status": "skipped_no_kb_id"
+    }
+  ]
+}

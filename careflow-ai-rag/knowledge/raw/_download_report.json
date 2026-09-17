@@ -1,0 +1,1352 @@
+{
+  "generated_at": "2026-09-17T05:42:46+00:00",
+  "script": "scripts/download_documents.py",
+  "documents_total": 30,
+  "documents": [
+    {
+      "document_id": "CORE001",
+      "title": "关于加强基层慢性病健康管理服务的指导意见",
+      "url": "https://www.nhc.gov.cn/jws/c100073/202510/3974d142eb1c4dd385b6e880f8617dcc.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 39075,
+      "sha256": "4f5a1427ee79fd229bebaba84192e90d0d459c215adb63c50aa749b2f63303e8",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/01_core/CORE001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:23:39+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "CORE002",
+      "title": "基层慢性病健康管理服务能力建设指引",
+      "url": "https://www.nhc.gov.cn/jws/c100073/202511/d3b6755fe7004cdeac938bf77b6a4a80.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 15853,
+      "sha256": "99c2c8d7ba40147aa51ae4c95dedb17d1c39c392a71893625d7d53278279cc09",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/01_core/CORE002.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/jws/c100073/202511/d3b6755fe7004cdeac938bf77b6a4a80/files/%E9%99%84%E4%BB%B6%EF%BC%9A%E5%9F%BA%E5%B1%82%E6%85%A2%E6%80%A7%E7%97%85%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1%E8%83%BD%E5%8A%9B%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%BC%95-20251120153850169.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/01_core/CORE002.pdf",
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "https://www.nhc.gov.cn/jws/c100073/202511/d3b6755fe7004cdeac938bf77b6a4a80/files/%E9%99%84%E4%BB%B6%EF%BC%9A%E5%9F%BA%E5%B1%82%E6%85%A2%E6%80%A7%E7%97%85%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1%E8%83%BD%E5%8A%9B%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%BC%95-20251120153850169.pdf",
+          "error": "annex pdf too short (0 chars)"
+        },
+        {
+          "url": "local-annex",
+          "error": "scanned annex pdf: no text layer"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:23:41+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/jws/c100073/202511/d3b6755fe7004cdeac938bf77b6a4a80/files/%E9%99%84%E4%BB%B6%EF%BC%9A%E5%9F%BA%E5%B1%82%E6%85%A2%E6%80%A7%E7%97%85%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1%E8%83%BD%E5%8A%9B%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%BC%95-20251120153850169.pdf",
+          "label": "附件：基层慢性病健康管理服务能力建设指引",
+          "match_score": 48
+        }
+      ]
+    },
+    {
+      "document_id": "CORE003",
+      "title": "国家基本公共卫生服务规范（第三版）",
+      "url": "https://www.nhc.gov.cn/jws/s3578/201703/d20c37e23e1f4c7db7b8e25f34473e1b.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 21415,
+      "sha256": "598dba23d13bf4bad06f027949a65570fa9197e19135b874270be9d7d5157534",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/01_core/CORE003.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/01_core/CORE003.pdf",
+      "annex_pdf_chars": 89316,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:24:13+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf",
+          "label": "国家基本公共卫生服务规范（第三版）.pdf",
+          "match_score": 28
+        }
+      ],
+      "annex_chars": 89316,
+      "annex_label": "国家基本公共卫生服务规范（第三版）.pdf"
+    },
+    {
+      "document_id": "CORE004",
+      "title": "关于做好2025年基本公共卫生服务工作的通知",
+      "url": "https://www.nhc.gov.cn/jws/c100073/202506/14a23782324542f59137bbf24a1c988f.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 35857,
+      "sha256": "1924e7791e88f6291b7476b310c92cc90a67c2783f05521c1a64d69e97e1a237",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/01_core/CORE004.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:24:25+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "CORE005",
+      "title": "中国公民健康素养——基本知识与技能（2024年版）",
+      "url": "https://www.nhc.gov.cn/xcs/c100123/202405/73a4927142f34152abed875634a3c13b.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 48921,
+      "sha256": "a99950ea2dc6cf43e6c61cec7e3e287ca382b2d7be6518c347c88cc55a8bf36a",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/01_core/CORE005.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:24:27+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "CORE006",
+      "title": "中国公民健康素养——基本知识与技能释义（2024年版）",
+      "url": "https://www.nhc.gov.cn/xcs/c100122/202405/f251e896a50a49ff8c632b4b3da93126.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 8231,
+      "sha256": "27f4da940f4491a6da2b3a8a770e59fab17abc95751ccf45b4246a530612de73",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/01_core/CORE006.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/xcs/c100122/202405/f251e896a50a49ff8c632b4b3da93126/files/1734001844015_12363.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/01_core/CORE006.pdf",
+      "annex_pdf_chars": 43817,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:24:29+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/xcs/c100122/202405/f251e896a50a49ff8c632b4b3da93126/files/1734001844015_12363.pdf",
+          "label": "中国公民健康素养——基本知识与技能释义（2024年版）",
+          "match_score": 44
+        }
+      ],
+      "annex_chars": 43817,
+      "annex_label": "中国公民健康素养——基本知识与技能释义（2024年版）"
+    },
+    {
+      "document_id": "HTN001",
+      "title": "基层医疗卫生机构高血压防治管理标准 WS/T 872—2025",
+      "url": "https://www.nhc.gov.cn/wjw/c100309/202509/b601cb822b25461f92f7aa66c03495a8.shtml",
+      "status": "skipped",
+      "http_status": null,
+      "bytes": 19555,
+      "sha256": "6058412d729aa29ee322ce2aac8adbafdea1a6515603533271e79c3c38719ac2",
+      "error": "",
+      "attempt": 0,
+      "local_file": "knowledge/raw/02_hypertension/HTN001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [
+        {
+          "local_file": "knowledge/raw/02_hypertension/HTN001.pdf",
+          "ext": "pdf",
+          "bytes": 364853,
+          "sha256": "4c099a4a656b72d6524c7acd05359da10b4dd861def402b80acd94a307d410d6",
+          "role": "attachment_pdf"
+        }
+      ],
+      "attachments": [
+        "https://www.nhc.gov.cn/wjw/c100309/202509/b601cb822b25461f92f7aa66c03495a8/files/WS%20T%20872%E2%80%942025.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/02_hypertension/HTN001.pdf",
+      "annex_pdf_chars": 3646,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:25:00+00:00",
+      "host": "www.nhc.gov.cn",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/wjw/c100309/202509/b601cb822b25461f92f7aa66c03495a8/files/WS%20T%20872%E2%80%942025.pdf",
+          "label": "WS/T 872—2025",
+          "match_score": 28
+        }
+      ]
+    },
+    {
+      "document_id": "HTN002",
+      "title": "国家基层高血压防治管理指南 2025版",
+      "url": "https://hbp-office.nccd.org.cn/download.html",
+      "status": "skipped",
+      "http_status": null,
+      "bytes": 235149,
+      "sha256": "b47f6630619f960f856dab2c20f99a1d8871bd983245439604cc64b4a49d12d0",
+      "error": "",
+      "attempt": 0,
+      "local_file": "knowledge/raw/02_hypertension/HTN002.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [
+        {
+          "local_file": "knowledge/raw/02_hypertension/HTN002.pdf",
+          "ext": "pdf",
+          "bytes": 1246571,
+          "sha256": "d6da41b5d3565c4969150009a6a5d00bb45de19b361cfa3ec9a0f51d25ef9bbd",
+          "role": "attachment_pdf"
+        }
+      ],
+      "attachments": [
+        "https://hbp-office.nccd.org.cn/files/%E3%80%8A%E5%9F%BA%E5%B1%82%E5%8C%BB%E7%96%97%E5%8D%AB%E7%94%9F%E6%9C%BA%E6%9E%84%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E7%AE%A1%E7%90%86%E6%A0%87%E5%87%86%E3%80%8B20250929.pdf",
+        "https://hbp-office.nccd.org.cn/files/%E5%9B%BD%E5%AE%B6%E5%9F%BA%E5%B1%82%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%972025%E7%89%88.pdf",
+        "https://hbp-office.nccd.org.cn/files/%E5%9B%BD%E5%AE%B6%E5%9F%BA%E5%B1%82%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E7%AE%A1%E7%90%86%E6%89%8B%E5%86%8C%202020%E7%89%88.pdf",
+        "https://hbp-office.nccd.org.cn/files/%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86-%E5%85%A5%E9%97%A8%E7%AF%87.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/02_hypertension/HTN002.pdf",
+      "annex_pdf_chars": 33286,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:25:00+00:00",
+      "host": "hbp-office.nccd.org.cn",
+      "annex_candidates": [
+        {
+          "url": "https://hbp-office.nccd.org.cn/files/%E5%9B%BD%E5%AE%B6%E5%9F%BA%E5%B1%82%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%972025%E7%89%88.pdf",
+          "label": "国家基层高血压防治管理指南2025版.pdf",
+          "match_score": 51
+        },
+        {
+          "url": "https://hbp-office.nccd.org.cn/files/%E5%9B%BD%E5%AE%B6%E5%9F%BA%E5%B1%82%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E7%AE%A1%E7%90%86%E6%89%8B%E5%86%8C%202020%E7%89%88.pdf",
+          "label": "国家基层高血压防治管理手册 2020版.pdf",
+          "match_score": 36
+        },
+        {
+          "url": "https://hbp-office.nccd.org.cn/files/%E3%80%8A%E5%9F%BA%E5%B1%82%E5%8C%BB%E7%96%97%E5%8D%AB%E7%94%9F%E6%9C%BA%E6%9E%84%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E7%AE%A1%E7%90%86%E6%A0%87%E5%87%86%E3%80%8B20250929.pdf",
+          "label": "《基层医疗卫生机构高血压防治管理标准》20250929.pdf",
+          "match_score": 30
+        },
+        {
+          "url": "https://hbp-office.nccd.org.cn/files/%E9%AB%98%E8%A1%80%E5%8E%8B%E9%98%B2%E6%B2%BB%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86-%E5%85%A5%E9%97%A8%E7%AF%87.pdf",
+          "label": "高血压防治必备知识-入门篇.pdf",
+          "match_score": 12
+        }
+      ]
+    },
+    {
+      "document_id": "HTN003",
+      "title": "健康中国行动—心脑血管疾病防治行动实施方案（2023—2030年）",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202311/a40dcf8a65314b818c46c9d1e683b9c3.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 35032,
+      "sha256": "ca3f4ff9e042f0b3ab5c8ed0ebac4af8af8d396b71824618b38e96149d0a630c",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/02_hypertension/HTN003.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:25:00+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "DM001",
+      "title": "健康中国行动——糖尿病防治行动实施方案（2024—2030年）",
+      "url": "https://www.nhc.gov.cn/wjw/c100375/202407/752d85bddda5420eb1c1fe3c2772a100.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 79333,
+      "sha256": "b9b10976eda839d629e3ae547d07fd66cea86fa30b04a9d4468c7d1dda56c4c5",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/03_diabetes/DM001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:25:02+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "DM002",
+      "title": "中国2型糖尿病防治指南（2020年版）",
+      "url": "https://rs.yiigle.com/CN2021/1315505.htm",
+      "status": "failed",
+      "http_status": 401,
+      "bytes": 0,
+      "sha256": "",
+      "error": "waf_or_empty_body: body_len=35 status=401 title=安全验证",
+      "attempt": 3,
+      "local_file": "",
+      "ext": "",
+      "content_kind": "",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:25:04+00:00",
+      "host": "rs.yiigle.com"
+    },
+    {
+      "document_id": "DM003",
+      "title": "国家基层糖尿病防治管理指南（2022）",
+      "url": "https://drugs.dxy.cn/pc/clinicalGuidelines/pFt03XqSDLS5Swuag1he4yw",
+      "status": "failed",
+      "http_status": 401,
+      "bytes": 0,
+      "sha256": "",
+      "error": "paywall_or_login_wall: third-party portal drugs.dxy.cn renders only a preview; full text requires login/membership (paywall not bypassed)",
+      "attempt": 0,
+      "local_file": "",
+      "ext": "",
+      "content_kind": "",
+      "attachments": [],
+      "secondary_files": [],
+      "checks": [
+        {
+          "url": "https://drugs.dxy.cn/pc/clinicalGuidelines/pFt03XqSDLS5Swuag1he4yw",
+          "error": "third-party portal drugs.dxy.cn renders only a preview; full text requires login/membership (paywall not bypassed)"
+        }
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "host": "drugs.dxy.cn",
+      "forced_pending": true
+    },
+    {
+      "document_id": "COPD001",
+      "title": "慢性阻塞性肺疾病患者健康服务规范（试行）",
+      "url": "https://www.nhc.gov.cn/jws/c100073/202409/ad3c2a8221184272872a31ae400ecd37.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 15782,
+      "sha256": "1283ce93decf654ccd0d8a066f6203a3d5a0cb7f2e6ee9053a8c45d1fd5903c4",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/04_copd/COPD001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/jws/c100073/202409/ad3c2a8221184272872a31ae400ecd37/files/1733998627313_83300.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/04_copd/COPD001.pdf",
+      "annex_pdf_chars": 4695,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:26:37+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/jws/c100073/202409/ad3c2a8221184272872a31ae400ecd37/files/1733998627313_83300.pdf",
+          "label": "《慢性阻塞性肺疾病患者健康服务规范（试行）》",
+          "match_score": 34
+        }
+      ],
+      "annex_chars": 4695,
+      "annex_label": "《慢性阻塞性肺疾病患者健康服务规范（试行）》"
+    },
+    {
+      "document_id": "COPD002",
+      "title": "健康中国行动——慢性呼吸系统疾病防治行动实施方案（2024—2030年）",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/eee1c5827dc84989907d9e4cb2d24c4b.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 47891,
+      "sha256": "f356efcf9265ec9542626e621a046b2ba449ec8c46024520f23b898bc579354b",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/04_copd/COPD002.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:27:11+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "MULTI001",
+      "title": "“三高”共管规范化诊疗中国专家共识（2023版）",
+      "url": "https://rs.yiigle.com/CN2021/1467649.htm",
+      "status": "failed",
+      "http_status": 401,
+      "bytes": 0,
+      "sha256": "",
+      "error": "waf_or_empty_body: body_len=35 status=401 title=安全验证",
+      "attempt": 3,
+      "local_file": "",
+      "ext": "",
+      "content_kind": "",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:27:13+00:00",
+      "host": "rs.yiigle.com"
+    },
+    {
+      "document_id": "MULTI002",
+      "title": "中国血脂管理指南（2023年）",
+      "url": "https://www.sinocardiomed.com/wp-content/uploads/2023/04/2023041513592396.pdf",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 1425323,
+      "sha256": "9a41ace3617559b2ece93c5c01972376ead8b37c8ff991a745248d32e1780daa",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/05_multimorbidity/MULTI002.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:28:47+00:00",
+      "host": "www.sinocardiomed.com"
+    },
+    {
+      "document_id": "LIFE001",
+      "title": "高血压等慢性病营养和运动指导原则（2024年版）",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 18308,
+      "sha256": "44027e8bcb0e6bbbaf0d9994e28eb9878c00a71370b20aaa47bb9abe939b682c",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011589_33945.pdf",
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011997_53103.pdf",
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011142_13562.pdf",
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003012304_36543.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE001.pdf",
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011589_33945.pdf",
+          "error": "annex pdf too short (417 chars)"
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011997_53103.pdf",
+          "error": "annex pdf too short (418 chars)"
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011142_13562.pdf",
+          "error": "annex pdf too short (432 chars)"
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003012304_36543.pdf",
+          "error": "annex pdf too short (449 chars)"
+        },
+        {
+          "url": "local-annex",
+          "error": "scanned annex pdf: no text layer"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:28:48+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011589_33945.pdf",
+          "label": "高血压营养和运动指导原则（2024年版）",
+          "match_score": 32
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011997_53103.pdf",
+          "label": "高血糖症营养和运动指导原则（2024年版）",
+          "match_score": 30
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003011142_13562.pdf",
+          "label": "高脂血症营养和运动指导原则（2024年版）",
+          "match_score": 28
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/256b4eb8398440a8811344c7be50a333/files/1734003012304_36543.pdf",
+          "label": "高尿酸血症营养和运动指导原则（2024年版）",
+          "match_score": 28
+        }
+      ]
+    },
+    {
+      "document_id": "LIFE002",
+      "title": "成人高血压食养指南（2023年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 22274,
+      "sha256": "5371aab1d074764e0335e15f8c8d1ba56eb8447d76e45a2d2bf0cb01574de442",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE002.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468104_32731.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468136_16321.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467736_68919.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467843_63457.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468167_10535.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE002.pdf",
+      "annex_pdf_chars": 37655,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:29:05+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+          "label": "成人高血压食养指南（2023年版）",
+          "match_score": 28
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468136_16321.pdf",
+          "label": "成人高血压食养指南（2023年版）问答",
+          "match_score": 28
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+          "label": "成人高脂血症食养指南（2023年版）",
+          "match_score": 22
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468104_32731.pdf",
+          "label": "成人高脂血症食养指南（2023年版）问答",
+          "match_score": 22
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+          "label": "成人糖尿病食养指南（2023年版）",
+          "match_score": 21
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468167_10535.pdf",
+          "label": "成人糖尿病食养指南（2023年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467736_68919.pdf",
+          "label": "儿童青少年生长迟缓食养指南（2023年版）",
+          "match_score": 18
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467843_63457.pdf",
+          "label": "儿童青少年生长迟缓食养指南（2023年版）问答",
+          "match_score": 18
+        }
+      ],
+      "annex_chars": 37655,
+      "annex_label": "成人高血压食养指南（2023年版）"
+    },
+    {
+      "document_id": "LIFE003",
+      "title": "成人糖尿病食养指南（2023年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 22274,
+      "sha256": "5371aab1d074764e0335e15f8c8d1ba56eb8447d76e45a2d2bf0cb01574de442",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE003.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468104_32731.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468136_16321.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467736_68919.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467843_63457.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468167_10535.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE003.pdf",
+      "annex_pdf_chars": 43312,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:29:13+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+          "label": "成人糖尿病食养指南（2023年版）",
+          "match_score": 29
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468167_10535.pdf",
+          "label": "成人糖尿病食养指南（2023年版）问答",
+          "match_score": 28
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+          "label": "成人高脂血症食养指南（2023年版）",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468104_32731.pdf",
+          "label": "成人高脂血症食养指南（2023年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+          "label": "成人高血压食养指南（2023年版）",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468136_16321.pdf",
+          "label": "成人高血压食养指南（2023年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467736_68919.pdf",
+          "label": "儿童青少年生长迟缓食养指南（2023年版）",
+          "match_score": 18
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467843_63457.pdf",
+          "label": "儿童青少年生长迟缓食养指南（2023年版）问答",
+          "match_score": 18
+        }
+      ],
+      "annex_chars": 43312,
+      "annex_label": "成人糖尿病食养指南（2023年版）"
+    },
+    {
+      "document_id": "LIFE004",
+      "title": "成人高脂血症食养指南（2023年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 22274,
+      "sha256": "5371aab1d074764e0335e15f8c8d1ba56eb8447d76e45a2d2bf0cb01574de442",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE004.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468104_32731.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468136_16321.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467736_68919.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467843_63457.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468167_10535.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE004.pdf",
+      "annex_pdf_chars": 26508,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:29:19+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468018_41219.pdf",
+          "label": "成人高脂血症食养指南（2023年版）",
+          "match_score": 30
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468104_32731.pdf",
+          "label": "成人高脂血症食养指南（2023年版）问答",
+          "match_score": 30
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468193_68545.pdf",
+          "label": "成人高血压食养指南（2023年版）",
+          "match_score": 22
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468136_16321.pdf",
+          "label": "成人高血压食养指南（2023年版）问答",
+          "match_score": 22
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468278_20318.pdf",
+          "label": "成人糖尿病食养指南（2023年版）",
+          "match_score": 21
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844468167_10535.pdf",
+          "label": "成人糖尿病食养指南（2023年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467736_68919.pdf",
+          "label": "儿童青少年生长迟缓食养指南（2023年版）",
+          "match_score": 18
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202301/f01895a06c5349ef999f25da833c166d/files/1732844467843_63457.pdf",
+          "label": "儿童青少年生长迟缓食养指南（2023年版）问答",
+          "match_score": 18
+        }
+      ],
+      "annex_chars": 26508,
+      "annex_label": "成人高脂血症食养指南（2023年版）"
+    },
+    {
+      "document_id": "LIFE005",
+      "title": "成人高尿酸血症与痛风食养指南（2024年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 19924,
+      "sha256": "32c97b182bacd0b185f8525651f6d06a1544b5e7fe905d18ee3db713b2ca9eeb",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE005.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134593_81517.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135429_97340.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134889_85723.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134816_82016.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135509_49966.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE005.pdf",
+      "annex_pdf_chars": 43557,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:29:26+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+          "label": "成人高尿酸血症与痛风食养指南（2024年版）",
+          "match_score": 38
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134593_81517.pdf",
+          "label": "成人高尿酸血症与痛风食养指南（2024年版）问答",
+          "match_score": 38
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+          "label": "成人肥胖食养指南（2024年版）",
+          "match_score": 21
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135429_97340.pdf",
+          "label": "成人肥胖食养指南（2024年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+          "label": "成人慢性肾脏病食养指南（2024年版）",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135509_49966.pdf",
+          "label": "成人慢性肾脏病食养指南（2024年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134816_82016.pdf",
+          "label": "儿童青少年肥胖食养指南（2024年版）问答",
+          "match_score": 19
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134889_85723.pdf",
+          "label": "儿童青少年肥胖食养指南（2024年版）",
+          "match_score": 18
+        }
+      ],
+      "annex_chars": 43557,
+      "annex_label": "成人高尿酸血症与痛风食养指南（2024年版）"
+    },
+    {
+      "document_id": "LIFE006",
+      "title": "成人肥胖食养指南（2024年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 19924,
+      "sha256": "32c97b182bacd0b185f8525651f6d06a1544b5e7fe905d18ee3db713b2ca9eeb",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE006.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134593_81517.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135429_97340.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134889_85723.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134816_82016.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135509_49966.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE006.pdf",
+      "annex_pdf_chars": 51893,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:29:43+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+          "label": "成人肥胖食养指南（2024年版）",
+          "match_score": 27
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135429_97340.pdf",
+          "label": "成人肥胖食养指南（2024年版）问答",
+          "match_score": 26
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134816_82016.pdf",
+          "label": "儿童青少年肥胖食养指南（2024年版）问答",
+          "match_score": 23
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134889_85723.pdf",
+          "label": "儿童青少年肥胖食养指南（2024年版）",
+          "match_score": 22
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+          "label": "成人高尿酸血症与痛风食养指南（2024年版）",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134593_81517.pdf",
+          "label": "成人高尿酸血症与痛风食养指南（2024年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+          "label": "成人慢性肾脏病食养指南（2024年版）",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135509_49966.pdf",
+          "label": "成人慢性肾脏病食养指南（2024年版）问答",
+          "match_score": 20
+        }
+      ],
+      "annex_chars": 51893,
+      "annex_label": "成人肥胖食养指南（2024年版）"
+    },
+    {
+      "document_id": "LIFE007",
+      "title": "成人慢性肾脏病食养指南（2024年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 19924,
+      "sha256": "32c97b182bacd0b185f8525651f6d06a1544b5e7fe905d18ee3db713b2ca9eeb",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE007.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134593_81517.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135429_97340.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134889_85723.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134816_82016.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+        "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135509_49966.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE007.pdf",
+      "annex_pdf_chars": 52198,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:30:17+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134718_36891.pdf",
+          "label": "成人慢性肾脏病食养指南（2024年版）",
+          "match_score": 32
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135509_49966.pdf",
+          "label": "成人慢性肾脏病食养指南（2024年版）问答",
+          "match_score": 32
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476136267_20714.pdf",
+          "label": "成人肥胖食养指南（2024年版）",
+          "match_score": 21
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+          "label": "成人高尿酸血症与痛风食养指南（2024年版）",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134593_81517.pdf",
+          "label": "成人高尿酸血症与痛风食养指南（2024年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135429_97340.pdf",
+          "label": "成人肥胖食养指南（2024年版）问答",
+          "match_score": 20
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134816_82016.pdf",
+          "label": "儿童青少年肥胖食养指南（2024年版）问答",
+          "match_score": 19
+        },
+        {
+          "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476134889_85723.pdf",
+          "label": "儿童青少年肥胖食养指南（2024年版）",
+          "match_score": 18
+        }
+      ],
+      "annex_chars": 52198,
+      "annex_label": "成人慢性肾脏病食养指南（2024年版）"
+    },
+    {
+      "document_id": "LIFE008",
+      "title": "居民体重管理核心知识（2024年版）及释义",
+      "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 14525,
+      "sha256": "5692a71abcfd22d7b361364b7d9028b8760edd77d8b7d8dab36e0d6c43970e4f",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/06_lifestyle/LIFE008.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103033_38151.pdf",
+        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103074_71816.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE008.pdf",
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103074_71816.pdf",
+          "error": "annex pdf too short (2083 chars)"
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103033_38151.pdf",
+          "error": "annex pdf too short (117 chars)"
+        },
+        {
+          "url": "local-annex",
+          "error": "scanned annex pdf: no text layer"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:30:21+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103074_71816.pdf",
+          "label": "居民体重管理核心知识(2024年版)释义",
+          "match_score": 32
+        },
+        {
+          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103033_38151.pdf",
+          "label": "居民体重管理核心知识(2024年版)",
+          "match_score": 30
+        }
+      ]
+    },
+    {
+      "document_id": "PRIM001",
+      "title": "居民电子健康档案首页基本内容（试行）",
+      "url": "https://www.nhc.gov.cn/jws/c100073/202406/f6520c3818c34637ab5f9d3d5232aaf3.shtml",
+      "status": "skipped",
+      "http_status": null,
+      "bytes": 14420,
+      "sha256": "62159477cd8b614616ec0520d4e8f7f3b420b821cc7cf6109fb372fb42ccb45d",
+      "error": "",
+      "attempt": 0,
+      "local_file": "knowledge/raw/07_primarycare/PRIM001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [
+        {
+          "local_file": "knowledge/raw/07_primarycare/PRIM001.pdf",
+          "ext": "pdf",
+          "bytes": 293934,
+          "sha256": "00d65ce4626b2b9791aabac97e2c658f67078739edfb9d089a4d9d742dd4d041",
+          "role": "attachment_pdf"
+        }
+      ],
+      "attachments": [
+        "https://www.nhc.gov.cn/jws/c100073/202406/f6520c3818c34637ab5f9d3d5232aaf3/files/1733998613556_61307.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/07_primarycare/PRIM001.pdf",
+      "annex_pdf_chars": 4463,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:30:55+00:00",
+      "host": "www.nhc.gov.cn",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/jws/c100073/202406/f6520c3818c34637ab5f9d3d5232aaf3/files/1733998613556_61307.pdf",
+          "label": "附件：居民电子健康档案首页基本内容（试行）",
+          "match_score": 30
+        }
+      ]
+    },
+    {
+      "document_id": "PRIM002",
+      "title": "家庭医生签约基本服务包清单（试行）",
+      "url": "https://www.nhc.gov.cn/jws/c100073/202504/57fa208d505041168bcf192331a129d2.shtml",
+      "status": "downloaded",
+      "http_status": 412,
+      "bytes": 18031,
+      "sha256": "c7f11dc2cf3bca10bc71b6d492d9b4c395dbe64fe880b1d634ffe8721cfa95c8",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/07_primarycare/PRIM002.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/jws/c100073/202504/57fa208d505041168bcf192331a129d2/files/1745214346283_15710.pdf"
+      ],
+      "annex_pdf": "knowledge/raw/07_primarycare/PRIM002.pdf",
+      "annex_pdf_chars": 8249,
+      "checks": [],
+      "fetched_at": "2026-09-17T05:30:55+00:00",
+      "host": "www.nhc.gov.cn",
+      "waf_note": "navigation status 412 (WZWS challenge) but body fully rendered",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/jws/c100073/202504/57fa208d505041168bcf192331a129d2/files/1745214346283_15710.pdf",
+          "label": "附件：家庭医生签约基本服务包清单（试行）",
+          "match_score": 28
+        }
+      ],
+      "annex_chars": 8249,
+      "annex_label": "附件：家庭医生签约基本服务包清单（试行）"
+    },
+    {
+      "document_id": "PRIM003",
+      "title": "老年人健康管理技术规范 WS/T 484—2015",
+      "url": "https://www.nhc.gov.cn/wjw/c100309/201511/6725aa6b7b6846058e3abf6ab3ee32d4.shtml",
+      "status": "downloaded",
+      "http_status": null,
+      "bytes": 19590,
+      "sha256": "73e66e975e49d3c94d06ffc170be9272a8ba37d06cf9e522dbca974835563a1f",
+      "error": "",
+      "attempt": 0,
+      "local_file": "knowledge/raw/07_primarycare/PRIM003.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://www.nhc.gov.cn/wjw/c100309/201511/6725aa6b7b6846058e3abf6ab3ee32d4/files/1743494788606_63004.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "knowledge/raw/07_primarycare/PRIM003.pdf",
+          "error": "garbled text layer: broken ToUnicode CMap, pdf rejected"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:42:46+00:00",
+      "host": "www.nhc.gov.cn",
+      "annex_candidates": [
+        {
+          "url": "https://www.nhc.gov.cn/wjw/c100309/201511/6725aa6b7b6846058e3abf6ab3ee32d4/files/1743494788606_63004.pdf",
+          "label": "WS/T 484-2015 老年人健康管理技术规范.pdf",
+          "match_score": 40
+        }
+      ]
+    },
+    {
+      "document_id": "WHO001",
+      "title": "WHO PEN (Package of essential NCD interventions)",
+      "url": "https://www.who.int/publications/i/item/9789240009226",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 85630,
+      "sha256": "ac42fa15a71893441e3662f14a2f16d6b898ed2263b8130105f2be29ed7b8901",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/08_who/WHO001.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "https://iris.who.int/bitstream/handle/10665/334186/9789240009226-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:32:02+00:00",
+      "host": "www.who.int",
+      "waf_note": "",
+      "annex_candidates": []
+    },
+    {
+      "document_id": "WHO002",
+      "title": "WHO HEARTS: Risk-based CVD Management",
+      "url": "https://www.who.int/publications/i/item/9789240001367",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 91660,
+      "sha256": "2df85c7abb5a5fb9115f03b065ae0ab3affda7e44706c76b0b28a2efcce9546c",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/08_who/WHO002.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://apps.who.int/iris/bitstream/handle/10665/260422/WHO-NMH-NVI-18.1-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
+        "http://apps.who.int/iris/bitstream/handle/10665/260423/WHO-NMH-NVI-18.5-eng.pdf",
+        "http://apps.who.int/iris/bitstream/handle/10665/275728/WHO-NMH-NVI-18.14-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "http://apps.who.int/iris/bitstream/handle/10665/275728/WHO-NMH-NVI-18.14-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:32:20+00:00",
+      "host": "www.who.int",
+      "waf_note": "",
+      "annex_candidates": [
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
+          "label": "Evidence-based treatment protocols",
+          "match_score": 17
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
+          "label": "Access to essential medicines and technology",
+          "match_score": 15
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf",
+          "label": "Tool for the development of a consensus protocol for treatment of hypertension",
+          "match_score": 13
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
+          "label": "Team-based care",
+          "match_score": 11
+        },
+        {
+          "url": "http://apps.who.int/iris/bitstream/handle/10665/275728/WHO-NMH-NVI-18.14-eng.pdf",
+          "label": "Implementation guide",
+          "match_score": 11
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260422/WHO-NMH-NVI-18.1-eng.pdf",
+          "label": "Healthy-lifestyle counselling",
+          "match_score": 5
+        },
+        {
+          "url": "http://apps.who.int/iris/bitstream/handle/10665/260423/WHO-NMH-NVI-18.5-eng.pdf",
+          "label": "Systems for monitoring",
+          "match_score": 5
+        }
+      ]
+    },
+    {
+      "document_id": "WHO003",
+      "title": "WHO HEARTS: Healthy-lifestyle counselling",
+      "url": "https://www.who.int/publications/i/item/WHO-NMH-NVI-18-1",
+      "status": "downloaded",
+      "http_status": 200,
+      "bytes": 92446,
+      "sha256": "895e185dc2976fe9f472d3d8fdcbbb0dab39612e6c1c202633b099f3234fc9a7",
+      "error": "",
+      "attempt": 1,
+      "local_file": "knowledge/raw/08_who/WHO003.html",
+      "ext": "html",
+      "content_kind": "html",
+      "secondary_files": [],
+      "attachments": [
+        "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/333221/9789240001367-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
+        "http://apps.who.int/iris/bitstream/handle/10665/260423/WHO-NMH-NVI-18.5-eng.pdf",
+        "http://apps.who.int/iris/bitstream/handle/10665/275728/WHO-NMH-NVI-18.14-eng.pdf",
+        "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf"
+      ],
+      "annex_pdf": null,
+      "annex_pdf_chars": 0,
+      "checks": [
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        },
+        {
+          "url": "http://apps.who.int/iris/bitstream/handle/10665/260423/WHO-NMH-NVI-18.5-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=502 bytes=381"
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
+          "error": "html payload too small: 755 bytes | playwright fallback: pdf fetch not a pdf: status=200 bytes=755"
+        }
+      ],
+      "fetched_at": "2026-09-17T05:34:28+00:00",
+      "host": "www.who.int",
+      "waf_note": "",
+      "annex_candidates": [
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/340527/WHO-NMH-NVI-19.8-eng.pdf",
+          "label": "Tool for the development of a consensus protocol for treatment of hypertension",
+          "match_score": 17
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260420/WHO-NMH-NVI-18.3-eng.pdf",
+          "label": "Access to essential medicines and technology",
+          "match_score": 15
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf",
+          "label": "Evidence-based treatment protocols",
+          "match_score": 9
+        },
+        {
+          "url": "http://apps.who.int/iris/bitstream/handle/10665/260423/WHO-NMH-NVI-18.5-eng.pdf",
+          "label": "Systems for monitoring",
+          "match_score": 9
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/260424/WHO-NMH-NVI-18.4-eng.pdf",
+          "label": "Team-based care",
+          "match_score": 7
+        },
+        {
+          "url": "http://apps.who.int/iris/bitstream/handle/10665/275728/WHO-NMH-NVI-18.14-eng.pdf",
+          "label": "Implementation guide",
+          "match_score": 7
+        },
+        {
+          "url": "https://apps.who.int/iris/bitstream/handle/10665/333221/9789240001367-eng.pdf",
+          "label": "Risk-based CVD management",
+          "match_score": 3
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "downloaded": 23,
+    "skipped": 4,
+    "failed": 3
+  }
+}

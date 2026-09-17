@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-09-17T05:25:40+00:00",
+  "provider": "mock",
+  "contract_version": "CF-CONTRACT-2.0",
+  "knowledge": {
+    "documents_total": 0,
+    "documents_active": 0,
+    "chunks_total": 0,
+    "manifest_status": "missing",
+    "knowledge_status": "missing"
+  },
+  "suites": {
+    "routing": {
+      "name": "routing",
+      "total": 28,
+      "passed": 28,
+      "pass_rate": 1.0,
+      "metrics": {
+        "domain_recall": 1.0,
+        "domain_precision": 0.9643,
+        "exact_match_rate": 0.9286
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 1
+    },
+    "injection": {
+      "name": "injection",
+      "total": 18,
+      "passed": 18,
+      "pass_rate": 1.0,
+      "metrics": {
+        "injection_detection_rate": 1.0,
+        "injection_bypass_count": 0.0
+      },
+      "failures": [],
+      "notes": [],
+      "duration_ms": 1
+    }
+  }
+}

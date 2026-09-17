@@ -1,0 +1,212 @@
+{
+  "CORE001": {
+    "publish_date": "2025-10-29",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/01_core/CORE001.html"
+  },
+  "CORE002": {
+    "publish_date": "2025-11-20",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/01_core/CORE002.html"
+  },
+  "CORE003": {
+    "publish_date": "2017-03-28",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/01_core/CORE003.html"
+  },
+  "CORE004": {
+    "publish_date": "2025-06-26",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/01_core/CORE004.html"
+  },
+  "CORE005": {
+    "publish_date": "2024-05-30",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/01_core/CORE005.html"
+  },
+  "CORE006": {
+    "publish_date": "2024-05-30",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/01_core/CORE006.html"
+  },
+  "HTN001": {
+    "publish_date": "2025-09-30",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "2026-03-01",
+    "effective_pattern": "实施时间[\\s\\S]{0,300}?(\\d{4})年(\\d{1,2})月(\\d{",
+    "source": "knowledge/raw/02_hypertension/HTN001.html"
+  },
+  "HTN002": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/02_hypertension/HTN002.html"
+  },
+  "HTN003": {
+    "publish_date": "2023-11-14",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/02_hypertension/HTN003.html"
+  },
+  "DM001": {
+    "publish_date": "2025-06-06",
+    "pattern": "name=\"?PubDate\"?[^>]*content=\"?(\\d{4}-\\d",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/03_diabetes/DM001.html"
+  },
+  "DM002": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": ""
+  },
+  "DM003": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": ""
+  },
+  "COPD001": {
+    "publish_date": "2024-09-13",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/04_copd/COPD001.html"
+  },
+  "COPD002": {
+    "publish_date": "2024-07-29",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/04_copd/COPD002.html"
+  },
+  "MULTI001": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": ""
+  },
+  "MULTI002": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/05_multimorbidity/MULTI002.pdf"
+  },
+  "LIFE001": {
+    "publish_date": "2024-07-01",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE001.html"
+  },
+  "LIFE002": {
+    "publish_date": "2023-01-18",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE002.html"
+  },
+  "LIFE003": {
+    "publish_date": "2023-01-18",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE003.html"
+  },
+  "LIFE004": {
+    "publish_date": "2023-01-18",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE004.html"
+  },
+  "LIFE005": {
+    "publish_date": "2024-02-08",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE005.html"
+  },
+  "LIFE006": {
+    "publish_date": "2024-02-08",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE006.html"
+  },
+  "LIFE007": {
+    "publish_date": "2024-02-08",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE007.html"
+  },
+  "LIFE008": {
+    "publish_date": "2024-07-02",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/06_lifestyle/LIFE008.html"
+  },
+  "PRIM001": {
+    "publish_date": "2024-06-21",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/07_primarycare/PRIM001.html"
+  },
+  "PRIM002": {
+    "publish_date": "2025-04-15",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/07_primarycare/PRIM002.html"
+  },
+  "PRIM003": {
+    "publish_date": "2015-11-16",
+    "pattern": "发布时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "effective_date": "2016-04-01",
+    "effective_pattern": "实施时间[\\s\\S]{0,80}?(\\d{4}-\\d{2}-\\d{2})",
+    "source": "knowledge/raw/07_primarycare/PRIM003.html"
+  },
+  "WHO001": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/08_who/WHO001.html"
+  },
+  "WHO002": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/08_who/WHO002.html"
+  },
+  "WHO003": {
+    "publish_date": "",
+    "pattern": "",
+    "effective_date": "",
+    "effective_pattern": "",
+    "source": "knowledge/raw/08_who/WHO003.html"
+  }
+}

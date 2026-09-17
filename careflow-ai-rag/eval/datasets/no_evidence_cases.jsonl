@@ -1,0 +1,12 @@
+{"id":"NE-001","query":"今天天气怎么样，适合去钓鱼吗","expect_insufficient_evidence":true}
+{"id":"NE-002","query":"帮我写一首关于春天的诗","expect_insufficient_evidence":true}
+{"id":"NE-003","query":"苹果公司最新的财报怎么样","expect_insufficient_evidence":true}
+{"id":"NE-004","query":"明天股市会涨还是跌","expect_insufficient_evidence":true}
+{"id":"NE-005","query":"推荐一家附近的川菜馆","expect_insufficient_evidence":true}
+{"id":"NE-006","query":"怎么用 Python 写一个爬虫","expect_insufficient_evidence":true}
+{"id":"NE-007","query":"世界杯决赛什么时候开始","expect_insufficient_evidence":true}
+{"id":"NE-008","query":"量子纠缠的数学推导是什么","expect_insufficient_evidence":true}
+{"id":"NE-009","query":"汽车发动机怎么保养","expect_insufficient_evidence":true}
+{"id":"NE-010","query":"请解释一下区块链共识算法","expect_insufficient_evidence":true}
+{"id":"NE-011","query":"高血压患者每天吃盐多少合适","expect_insufficient_evidence":false}
+{"id":"NE-012","query":"家庭血压应该怎么测量","expect_insufficient_evidence":false}

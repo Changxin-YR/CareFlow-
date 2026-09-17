@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-09-17T05:24:35+00:00",
+  "provider": "mock",
+  "contract_version": "CF-CONTRACT-2.0",
+  "knowledge": {
+    "documents_total": 0,
+    "documents_active": 0,
+    "chunks_total": 0,
+    "manifest_status": "missing",
+    "knowledge_status": "missing"
+  },
+  "suites": {
+    "citation": {
+      "name": "citation",
+      "total": 22,
+      "passed": 22,
+      "pass_rate": 1.0,
+      "metrics": {
+        "citation_case_pass_rate": 1.0,
+        "false_citation_count": 0.0,
+        "illegal_citation_block_rate": 1.0
+      },
+      "failures": [],
+      "notes": [
+        "非法引用样本 6 条，全部拦截 = True"
+      ],
+      "duration_ms": 4
+    }
+  }
+}

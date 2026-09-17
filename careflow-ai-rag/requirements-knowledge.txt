@@ -1,0 +1,10 @@
+# CareFlow 康脉智护 —— 知识库管线依赖（下载 / 解析 / 清洗）
+# 不进入运行时镜像；仅在构建知识库的机器上安装。
+-r requirements.txt
+
+playwright>=1.40          # www.nhc.gov.cn 的 WZWS JS 风控必须用真实浏览器
+beautifulsoup4>=4.12
+lxml>=5.0
+pypdf>=4.0
+PyMuPDF>=1.24
+python-docx>=1.1
