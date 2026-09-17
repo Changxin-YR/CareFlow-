@@ -145,6 +145,7 @@ class Chunk:
     authority: str = ""
     authority_level: str = ""
     version: str = ""
+    publish_date: str = ""
     effective_date: str = ""
     diseases: list[str] = field(default_factory=list)
     scenarios: list[str] = field(default_factory=list)
@@ -165,6 +166,7 @@ class Chunk:
             authority=str(payload.get("authority") or ""),
             authority_level=str(payload.get("authority_level") or ""),
             version=str(payload.get("version") or ""),
+            publish_date=str(payload.get("publish_date") or ""),
             effective_date=str(payload.get("effective_date") or ""),
             diseases=[str(item) for item in (payload.get("diseases") or [])],
             scenarios=[str(item) for item in (payload.get("scenarios") or [])],

@@ -424,6 +424,7 @@ class RetrievalService:
                 authority=chunk.authority,
                 authority_level=chunk.authority_level,
                 version=chunk.version,
+                publish_date=chunk.publish_date,
                 effective_date=chunk.effective_date,
                 source_url=chunk.source_url,
                 score=round(float(item.get("_score", 0.0)), 6),

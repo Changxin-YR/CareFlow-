@@ -497,7 +497,7 @@ ok, reason = citation_service.verify_citation(citation)
 - LLM 客户端为 `MockLLMClient`：**不访问外部网络**
 - 提取/随访走**规则引擎**（`model="rule-engine"`）
 - RAG 走**本地 BM25 + 原文摘录**（`model="extractive-baseline"`）
-  - **端到端可用**：`497 passed`（知识库产物就绪后，原先 11 个 skip 的 live-knowledge 测试已全部通过）
+  - **端到端可用**：`521 passed`（知识库产物就绪后，原先 11 个 skip 的 live-knowledge 测试已全部通过）
 
 ### 7.2 `AI_PROVIDER=qianfan`（正式运行）
 
@@ -549,11 +549,11 @@ ok, reason = citation_service.verify_citation(citation)
 ### 9.1 测试套件
 
 ```
-497 passed
+521 passed
 ```
 
-> **历史值**（保留作对比）：`436 passed` → 现为 **497 passed**；
-> 更早（知识库产物就绪前）为 `399 passed, 11 skipped`。
+> **历史值**（保留作对比）：`399 passed, 11 skipped`（产物就绪前）→ `436 passed`（第二轮）
+> → `497 passed`（第三轮）→ **`521 passed`（当前，第四轮补数据后）**。
 > 那 11 个 `skipped` 是 `tests/test_live_knowledge.py`（需要真实知识库产物），
 > 管线跑通后**已全部通过**（详见 [`KNOWLEDGE_BASE.md` §8.3](./KNOWLEDGE_BASE.md)）。
 
@@ -580,7 +580,7 @@ Citation 校验、检索、路由、安全、Prompt 版本、日志、千帆客�
 | safety | 24 / 24 | `safety_cases.jsonl` | `block_decision_accuracy=1.0`、`flag_accuracy=1.0` |
 | injection | 18 / 18 | `injection_cases.jsonl` | `injection_detection_rate=1.0`、**`injection_bypass_count=0.0`** |
 
-> 最近一次离线评测（`AI_PROVIDER=mock`，**知识库 30 篇登记 / 27 active / 1041 切片**，
+> 最近一次离线评测（`AI_PROVIDER=mock`，**知识库 34 篇登记 / 28 active / 2448 可检索切片**，
 > 报告生成于 `2026-09-17T07:21:37+00:00`）：上表即实测结果，
 > **仅 `rag` 套件有 1 个用例未通过**（`31/32`），其余套件全通过。
 >

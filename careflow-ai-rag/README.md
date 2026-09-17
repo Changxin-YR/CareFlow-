@@ -226,7 +226,7 @@ careflow-ai-rag/
 ├── scripts/                        # 下载 / 校验 / 清洗 / 切片 / 同步千帆 / 评测
 ├── eval/                           # 数据集 + REPORT.md + results/
 ├── tests/                          # pytest 测试套件
-├── docs/                           # API / KNOWLEDGE_BASE / RAG_ARCHITECTURE / SAFETY
+├── docs/                           # API / KNOWLEDGE_BASE / DATA_GAPS / GAP_FIX_REPORT / OCR_WORKFLOW / RAG_ARCHITECTURE / SAFETY
 ├── Dockerfile
 ├── README.md · HANDOFF.md · TEST_REPORT.md · CONTRACT_COMPLIANCE.md
 └── .env.example
@@ -302,7 +302,9 @@ curl http://127.0.0.1:8100/health
 | [docs/API.md](docs/API.md) | 端点、字段表、curl 示例、错误码 |
 | [docs/RAG_ARCHITECTURE.md](docs/RAG_ARCHITECTURE.md) | 检索链路、BM25/RRF 公式、Citation 校验、降级路径 |
 | [docs/SAFETY.md](docs/SAFETY.md) | 硬拦截/软标记/红旗/输出裁剪清单 + **已知局限** |
-| [docs/KNOWLEDGE_BASE.md](docs/KNOWLEDGE_BASE.md) | 来源表、权威等级策略、人工下载清单、切片统计 |
+| [docs/KNOWLEDGE_BASE.md](docs/KNOWLEDGE_BASE.md) | 来源表（34 篇）、权威等级策略、覆盖缺口状态、切片统计 |
+| **[docs/GAP_FIX_REPORT.md](docs/GAP_FIX_REPORT.md)** | **缺口修复报告：逐项 RESOLVED/BLOCKED 判定 + 证据链（SHA256/字节/文本层）** |
+| [docs/OCR_WORKFLOW.md](docs/OCR_WORKFLOW.md) | **扫描件 OCR 草稿 → 人工校对 → 入库流程**（校对前不得置 active） |
 | **[docs/DATA_GAPS.md](docs/DATA_GAPS.md)** | **需要人工获取的官方资料清单（去哪找 + 找到后怎么入库 + 验收标准）** |
 | [HANDOFF.md](HANDOFF.md) | 交接说明与 **BLOCKED 清单** |
 | [TEST_REPORT.md](TEST_REPORT.md) | 真实执行的测试结果 |

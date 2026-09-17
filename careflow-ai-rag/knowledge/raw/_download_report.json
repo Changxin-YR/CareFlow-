@@ -988,33 +988,26 @@
       "title": "居民体重管理核心知识（2024年版）及释义",
       "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44.shtml",
       "status": "downloaded",
-      "http_status": 412,
-      "bytes": 14525,
-      "sha256": "5692a71abcfd22d7b361364b7d9028b8760edd77d8b7d8dab36e0d6c43970e4f",
+      "http_status": 200,
+      "bytes": 42903,
+      "sha256": "27e731b9b11d1da48e18bf5dba74920751fa9642dfc91ad41c179c98a6d73c6f",
       "error": "",
       "attempt": 1,
-      "local_file": "knowledge/raw/06_lifestyle/LIFE008.html",
-      "ext": "html",
-      "content_kind": "html",
+      "local_file": "knowledge/raw/06_lifestyle/LIFE008.pdf",
+      "ext": "pdf",
+      "content_kind": "pdf",
       "secondary_files": [],
       "attachments": [
         "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103033_38151.pdf",
         "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103074_71816.pdf"
       ],
-      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE008.pdf",
+      "annex_pdf": null,
       "annex_pdf_chars": 0,
       "checks": [
         {
-          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103074_71816.pdf",
-          "error": "annex pdf too short (2083 chars)"
-        },
-        {
-          "url": "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44/files/1734003103033_38151.pdf",
-          "error": "annex pdf too short (117 chars)"
-        },
-        {
-          "url": "local-annex",
-          "error": "scanned annex pdf: no text layer"
+          "url": "knowledge/raw/06_lifestyle/LIFE008.pdf",
+          "error": "",
+          "note": "原生文本型单页 PDF（0 图片 / 0 矢量对象），内容是标题 + 八条核心知识，无需 OCR"
         }
       ],
       "fetched_at": "2026-09-17T05:30:21+00:00",

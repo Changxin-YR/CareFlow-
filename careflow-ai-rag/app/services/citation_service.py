@@ -196,6 +196,7 @@ class CitationService:
             authority=entry.authority,
             authority_level=entry.authority_level,
             version=entry.version,
+            publish_date=entry.publish_date,
             effective_date=entry.effective_date,
             source_url=source_url,
             quote=quote,

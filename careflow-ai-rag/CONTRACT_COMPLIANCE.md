@@ -205,8 +205,10 @@
 | Safety | 20+ | 24 | 同上 |
 | Prompt Injection | 15+ | 18 | 同上 |
 
-单元/集成测试：`tests/` 共 **21 个测试文件**，`python -m pytest tests/` →
-**`497 passed`**；覆盖率 `TOTAL 2751 stmts / 268 miss / 90%`。
+单元/集成测试：`tests/`，`python -m pytest tests/` →
+**`521 passed`**；覆盖率 `TOTAL 2774 stmts / 266 miss / 90%`。
+
+> **历史值**：第三轮修复后为 `497 passed / 2751 stmts / 90%`；更早为 `436 passed`。
 
 覆盖范围：Manifest、Schema、Router、Citation Validator、Safety、Mock Qianfan、
 Timeout、Invalid JSON、No Evidence、Health API、Extract API、RAG API、FollowUp API、
@@ -215,6 +217,9 @@ Timeout、Invalid JSON、No Evidence、Health API、Extract API、RAG API、Foll
 > 第三轮（2026-09-17）新增 3 个 bug 回归文件：
 > `tests/test_text_normalization.py`（44）、`tests/test_domain_filter.py`（11）、
 > `tests/test_http_headers.py`（6），合计 61 用例 → 全仓 `436 → 497`。
+>
+> 第四轮补数据后又新增 `tests/test_live_gate.py`（18 用例）与 `tests/test_publish_date.py`（6 用例）
+> → 全仓 **`497 → 521`**。
 
 | # | 契约要求 | 状态 |
 |---|---|---|

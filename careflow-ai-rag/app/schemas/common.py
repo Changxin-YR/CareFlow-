@@ -56,6 +56,7 @@ class RetrievedChunk(BaseModel):
     authority: str = ""
     authority_level: str = ""
     version: str = ""
+    publish_date: str = ""
     effective_date: str = ""
     source_url: str = ""
     score: float = 0.0
@@ -73,6 +74,7 @@ class Citation(BaseModel):
     authority: str = ""
     authority_level: str = ""
     version: str = ""
+    publish_date: str = ""
     effective_date: str = ""
     source_url: str
     quote: str = Field(default="", description="检索命中片段的原文截取，非模型生成")

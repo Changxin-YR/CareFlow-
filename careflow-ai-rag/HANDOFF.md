@@ -13,9 +13,9 @@
 一个**可独立部署、已被 HTTP 端到端验证**的 AI Gateway：
 
 ```
-30 篇官方文档 → 27 篇 active → 1041 个切片
+34 篇官方文档 → 28 篇 active（6 draft）→ 2448 个可检索切片（文件 2451）
 → BM25 检索 → 真实 Citation → 三级安全裁剪
-→ FastAPI 五端点 → 497 tests passed / 覆盖率 90%
+→ FastAPI 五端点 → 521 tests passed / 覆盖率 90%
 → Docker 可构建可运行 / Smoke Test 14/14
 ```
 
@@ -40,7 +40,7 @@
 
 第二步（先验证现状，再动手）：
   cd C:\Users\27363\Desktop\大健康\careflow-ai-rag
-  python -m pytest tests/ -q                  # 期望 497 passed
+  python -m pytest tests/ -q                  # 期望 521 passed
   python scripts/validate_manifest.py         # 期望 VALIDATION PASSED，退出码 0
   python scripts/verify_sources.py            # 期望 VERIFY PASSED
   python scripts/build_chunks.py              # 期望 0 verbatim problems
@@ -80,9 +80,9 @@
 | 8 | Safety | `app/services/safety_service.py` | ✅ 含 76 条回归用例 |
 | 9 | FollowUp 草稿 | `app/services/followup_service.py` | ✅ |
 | 10 | Knowledge Manifest | `knowledge/manifest/knowledge_manifest.csv` | ✅ 30 行，校验 0 错误 |
-| 11 | 切片 | `knowledge/chunks/chunks.jsonl` | ✅ **1041** 个，verbatim 自检 0 问题 |
+| 11 | 切片 | `knowledge/chunks/chunks.jsonl` | ✅ 文件 **2451** 个，**可检索 2448** 个，verbatim 自检 **0 问题** |
 | 12 | 知识库管线脚本 | `scripts/` | ✅ |
-| 13 | 测试 | `tests/`（21 个文件） | ✅ **497 passed / 0 failed / 0 skipped**，覆盖率 **90%** |
+| 13 | 测试 | `tests/` | ✅ **521 passed / 0 failed / 0 skipped**，覆盖率 **90%** |
 | 14 | 离线评测 | `eval/` | ✅ 7 套件，见 `eval/REPORT.md` |
 | 15 | Docker | `Dockerfile` | ✅ 构建 + 容器运行 + Smoke 14/14 |
 | 16 | 文档 | `README.md` `HANDOFF.md` `TEST_REPORT.md` `CONTRACT_COMPLIANCE.md` `docs/*` | ✅ |
@@ -286,7 +286,7 @@ python scripts/smoke_test.py --base-url http://127.0.0.1:8100 --expect-knowledge
 | `MANIFEST_PATH` / `CHUNKS_PATH` | `knowledge/...` | 知识库产物路径（测试用覆盖点） |
 
 > ⚠️ `RAG_MIN_MATCHED_TERMS` / `RAG_MIN_RELEVANCE_SCORE` 是**按当前语料经验标定**的
-> （1041 个切片、平均 596.8 字符）。**换语料或大幅增删文档后必须重新标定**，
+> （2451 个切片、平均 559.9 字符）。**换语料或大幅增删文档后必须重新标定**，
 > 否则会出现"该答不答"或"不该答乱答"。标定方法见 `TEST_REPORT.md` §6。
 
 ### 4.5 知识库更新流程
@@ -357,10 +357,28 @@ python scripts/sync_qianfan.py            # 推送到千帆（BLOCKED 待验证�
 | 缺陷 | 症状 | 处置 |
 |---|---|---|
 | **PRIM003（P0 标准 WS/T 484—2015）文本乱码** | 官方 PDF 的 **ToUnicode CMap 损坏**，抽出 `犐犆犛１１．０２０`（应为 `ICS 11.020`），贡献 60 个切片且 P0 加权最高 | 弃用该 PDF，改用官方发布页 HTML（元数据），**60 乱码切片 → 1**；`title_bigram_ratio` 0.1 → 0.95 |
-| **`extract_publish_dates.py` 从未被运行过** | `_dates.json` 不存在 → `publish_date` 只有 3 行有值、`effective_date` 全空 | 跑通 + 扩展抽「实施日期」→ `publish_date` **23/30**、`effective_date` **2/30**，日期一路下发到 Citation |
+| **`extract_publish_dates.py` 从未被运行过** | `_dates.json` 不存在 → `publish_date` 只有 3 行有值、`effective_date` 全空 | 跑通 + 扩展抽「实施日期」→ `publish_date` **34/34**、`effective_date` **2/34**，日期一路下发到 Citation（**历史值**：当时为 23/30 与 2/30） |
 | LIFE002/003/004 曾是同一份入口页 | 6 篇文档正文重复 | 已改为真实的食养指南 PDF |
 
-### 5.5 一个重要的过程教训
+### 5.5 第三轮补数据时新发现的 5 个 bug（均为真 bug，交接文档未提及）
+
+| # | 缺陷 | 症状 | 根因 | 处置 |
+|---|---|---|---|---|
+| 1 | **补入 WHO 全文后，WHO 自己的缩写查询被闸门拦死** | `WHO PEN 是什么？` 命中 **0**（而 WHO001 里满篇 "WHO PEN"） | `who`/`pen` 出现在 1300+ 个 WHO 切片（页眉页脚），IDF 极低 → BM25 分仅 **4.39**，被 `score>=12` 拒绝。**绝对分阈值对"短缩写 + 大语料"天然失效** | 闸门新增**查询词覆盖率**分支，且要求 `matched>=2`；分母只统计**被检索子集内 df>0** 的词 |
+| 2 | **路由关键词「基层」过宽** | `WHO PEN 对基层非传染性疾病管理提出了什么框架？` 命中 `PRIM001/PRIM002`（中文基层文档），WHO001 连 Top-5 都进不去 | `KB_PRIMARYCARE` 关键词含**裸「基层」**，路由返回 `['KB_PRIMARYCARE','KB_WHO']` | 把裸「基层」换成 `基层医疗卫生机构`/`基层医疗`/`基层卫生`。修复后路由到 `['KB_WHO']`，命中 WHO001，3 条 P4 引用可追溯 |
+| 3 | **切片不是原文连续片段** | verbatim 自检报 `WHO001-0509: content is not a verbatim slice` | WHO PDF 中有些行以 `####` 开头（流程图文字）被误判为标题块，`join_units` 一律用空行重连，而原文只有单个换行 → 多出一个空行 | 让每个 unit 携带**原文中的真实前置分隔符（`gap`）**，按真实分隔符拼接。修复后 **2451/2451 全部通过** |
+| 4 | **`validate_manifest` 对非 active 行的 sha256 规则比契约更严** | 把「已下载但内容不可用」的 3 篇置 `draft` 并保留 `local_file`/`sha256` 后，校验器直接报错 | 契约原文是「非 active 行 local_file **允许**为 PENDING 且 sha256 **允许**为空」，脚本实现成了**必须**为空 | 改为**更严谨**：非 active 行若声明 `local_file` 则文件必须存在，若声明 `sha256` 则**必须与文件实际哈希一致**（原来完全不校验 draft 哈希） |
+| 5 | **`build_manifest` 忽略注册表里的 `publish_date`** | 人工核定的日期进不了 manifest | 优先级只有 `_dates.json` 与 `DATE_OVERRIDES`，**完全不读注册表内置值** | 改为三级回退：**官方页面抽取值 > `DATE_OVERRIDES` > 注册表内置值** |
+
+> 闸门标定实测（缺陷 1 的修复依据）：
+
+| 规则 | 保住需要证据的查询 | 误留无关查询 |
+|---|---|---|
+| 旧规则 `matched>=3 或 score>=12` | 31/34 | **0/10** |
+| 加 `coverage>=0.8`（无 `matched` 约束） | 33/34 | **4/10**（会放行"明天股市会涨还是跌"） |
+| **最终 `(coverage>=0.8 且 matched>=2) 或 matched>=3 或 score>=12`** | **31/34** | **0/10** |
+
+### 5.6 一个重要的过程教训
 
 修全角时我**一度把 `json_utils.py` 改坏**（`fold_fullwidth` 定义没落盘，
 `normalize_whitespace` 却引用它）→ `ImportError`，**整个测试套件跑不起来**。
@@ -376,7 +394,19 @@ python scripts/sync_qianfan.py            # 推送到千帆（BLOCKED 待验证�
 | B2 | **千帆知识库检索 / AppBuilder 路径** | 无凭据 + 各平台版本路径有差异 | 按当期官方文档核对 `QianfanClient.DEFAULT_PATHS` 后真机联调 |
 | B3 | `scripts/sync_qianfan.py` 真实同步 | 同上 | 同上 |
 | B4 | **真实 RAG（千帆 KB 侧）** | B2 未解除。**本地切片 RAG 已端到端验证**（recall@K 96.7%、虚假引用 0） | 同上 |
-| B5 | 真实 LLM 路径的评测数字 | 当前 497 测试与 eval 全部基于 `AI_PROVIDER=mock` | 配好凭据后跑 `evaluate.py --provider qianfan` |
+| B5 | 真实 LLM 路径的评测数字 | 当前 521 测试与 eval 全部基于 `AI_PROVIDER=mock` | 配好凭据后跑 `evaluate.py --provider qianfan` |
+
+**数据类阻塞（非凭据类，需人工/OCR）**：
+
+| # | 项 | 阻塞原因 | 解除条件 |
+|---|---|---|---|
+| D1 | `PRIM003` 正文 | 官方 PDF `ToUnicode` CMap 损坏，**且交接文档给的直链与已有文件 `SHA256` 完全相同**（同一份坏文件） | OCR + **人工校对**，或找带正确 `ToUnicode` 的官方电子版 |
+| D2 | `CORE002` / `LIFE001` / `LIFE001A/B/C` / `LIFE008` 正文 | 官方附件是**无文本层扫描件**（不是"没抓到"） | OCR + **人工校对**（校对前不得置 `active`） |
+| D3 | `DM002` / `DM003` / `MULTI001` | **付费墙 / 需机构授权**，契约禁止绕过 | 机构采购授权，或官方免费版 |
+
+> **本轮已解除的数据阻塞**：
+> ~~`WHO001`/`WHO002`/`WHO003` 仅有出版页摘要~~ → **已解决**（改用新 IRIS API 直链取得完整英文全文，85/80/30 页）；
+> ~~`LIFE008` 同页《释义》未收录~~ → **已解决**（`LIFE008A`，2092 字符，已入库）。
 
 ---
 
@@ -403,11 +433,12 @@ python scripts/sync_qianfan.py            # 推送到千帆（BLOCKED 待验证�
 
 | 文档 | 缺口 | 现状 |
 |---|---|---|
-| `PRIM003`（P0 标准 WS/T 484—2015 老年人健康管理技术规范） | **实质正文缺失**：PDF ToUnicode 损坏、发布页仅 281 字符元数据 | 39 页 PDF 仍在 `knowledge/raw/07_primarycare/PRIM003.pdf`（3.9 MB）待替换干净源 |
-| `CORE002` / `LIFE001` / `LIFE008` | 官方附件是**无文本层扫描件**（实测 0 / 417 / 117 字符） | 页面正文极薄（476 / 1329 / 597 字符），需 OCR |
-| `WHO001` / `WHO002` / `WHO003` | `iris.who.int` 改版，原 `bitstream/handle/...` 链接返回 755 字节 HTML | 只有出版页摘要（1.4K~2.4K 字符），P4 级 |
-| `DM002` / `DM003` / `MULTI001` | **付费墙**（契约禁止绕过） | `status=draft` + `local_file=PENDING` |
-| **`effective_date` 28/30 为空** | 无法仅凭 manifest 自动判定"现行有效版本" | 契约「版本冲突优先现行有效规范」目前只能靠 `status` + `authority_level` **缓解**，**未完全落地** |
+| `PRIM003`（P0 标准 WS/T 484—2015 老年人健康管理技术规范） | **实质正文缺失**（状态：**仍阻塞**）：PDF `ToUnicode` 损坏、发布页仅 281 字符元数据 | 39 页 PDF 仍在 `knowledge/raw/07_primarycare/PRIM003.pdf`（3.9 MB）待替换干净源。**注意：交接文档给的"官方完整 PDF"直链与已有文件 `SHA256` 相同，是同一份坏文件，不要再追** |
+| `CORE002` / `LIFE001` / `LIFE001A/B/C` / `LIFE008` | 官方附件是**无文本层扫描件**（实测 0 / 388 / 391 / 405 / 418 / 106 字符）——**不是"没抓到"** | 页面正文极薄（476 / 1325 / 456 / 472 / 503 / 594 字符），需 OCR。`LIFE001A/B/C` 已置 `draft` |
+| ~~`WHO001` / `WHO002` / `WHO003`~~ | **已解决** ✅ | 改用 `iris.who.int/server/api/core/bitstreams/<uuid>/content` 取得完整英文全文（32.4 万 / 36.8 万 / 5.1 万字符） |
+| ~~`LIFE008` 同页《释义》未收录~~ | **已解决** ✅ | `LIFE008A`（释义，2092 字符）已入库 |
+| `DM002` / `DM003` / `MULTI001` | **无法合法获取**（付费墙，契约禁止绕过） | `status=draft` + `local_file=PENDING`，已补 DOI 与正式出处 |
+| **`effective_date` 32/34 为空** | 无法仅凭 manifest 自动判定"现行有效版本" | 契约「版本冲突优先现行有效规范」目前只能靠 `status` + `authority_level` **缓解**，**未完全落地**（属"按规则执行"的正常结果，非数据错误） |
 | `P2`（国家级医学中心）等级为 **0 篇** | 权威等级分布不完整 | 需补充来源 |
 
 **影响**：相关主题的提问会走 `insufficient_evidence=true`。
@@ -424,8 +455,8 @@ python scripts/sync_qianfan.py            # 推送到千帆（BLOCKED 待验证�
 | **P0** | **接千帆凭据跑通 B1~B5** | 核对 `DEFAULT_PATHS` 与 `CREATE_DOC_PATH` → `/v1/status?probe=1` → `sync_qianfan.py` → `evaluate.py --provider qianfan` → 最终 Smoke Test。**在此之前所有"完成"结论都只对 mock 有效。** |
 | **P1** | **给 `PRIM003` 找干净源** | 试：国家卫生健康委标准库、卫生标准网、国家标准全文公开系统；目标是带正确 ToUnicode 的 PDF，或可复制的 HTML/Word。这是当前**最高价值的单个数据缺口**（P0 标准 + 老年健康核心场景）。 |
 | **P1** | **补 `effective_date`** | 从已下载的 PDF 首页批量抽（标准类文档首页通常有"实施日期"），或对 `HTN002`（nccd 下载页）与 WHO 三篇单独处理。这是让契约「现行有效版本」真正可落地的前提。 |
-| **P2** | 三份扫描件 OCR | `CORE002` / `LIFE001` / `LIFE008`：装 OCR（PaddleOCR / tesseract-chi）→ 渲染 PDF 页面 → OCR → **人工校对** → 替换 `local_file` → 重建切片。OCR 结果未经校对不得入库。 |
-| **P2** | 重新定位 WHO 全文 PDF | 用 WHO 出版页里的 `iris.who.int/server/api/core/bitstreams/<uuid>/content`（旧 `bitstream/handle/` 已失效）。注意 WHO 文档体量较大。 |
+| **P1** | 扫描件 OCR（阻塞项） | `CORE002` / `LIFE001` / `LIFE001A/B/C` / `LIFE008`。**完整操作步骤见 [`docs/OCR_WORKFLOW.md`](docs/OCR_WORKFLOW.md)**：生成草稿 → 逐页对照校对 → 产出 `reviewed: yes` 校对记录 → 入库 → 重建切片。OCR 结果未经校对不得入库；`LIFE001A/B/C` 校对后需从 `draft` 改回 `active`（并同步移除 `build_manifest.py` 的 `FORCE_DRAFT` 条目） |
+| ~~P2~~ **已解决** | ~~重新定位 WHO 全文 PDF~~ | **本轮已完成**：用 `iris.who.int/server/api/core/bitstreams/<uuid>/content` 取得完整全文（85/80/30 页）。**若将来再遇到 WHO 抓取失败，先检查链接是否为旧的 `bitstream/handle/...` 形式** |
 | **P2** | 按真实语料重新标定相关性闸门 | 换语料必须做，方法见 `TEST_REPORT.md` §6 |
 | **P2** | 补 P2 级来源 | 国家级医学中心（国家心血管病中心、国家基层糖尿病防治管理办公室等）的正式指南 |
 | **P3** | 补 3/5/8 三档 Top-K 扫描 | 契约提到，当前只用配置值 |
@@ -442,7 +473,7 @@ python scripts/sync_qianfan.py            # 推送到千帆（BLOCKED 待验证�
 cd careflow-ai-rag
 
 # 1) 环境与测试
-python -m pytest tests/ -q                 # 期望 497 passed
+python -m pytest tests/ -q                 # 期望 521 passed
 python scripts/validate_manifest.py        # 期望 VALIDATION PASSED，退出码 0
 python scripts/verify_sources.py           # 期望 VERIFY PASSED
 python scripts/build_chunks.py             # 期望 0 verbatim problems
@@ -468,7 +499,7 @@ docker build -t careflow-ai-rag:dev .
 careflow-ai-rag/
 ├── README.md                     总览与快速开始
 ├── HANDOFF.md                    ← 本文件
-├── TEST_REPORT.md                真实执行结果（497 测试 / 评测 / Docker / Smoke）
+├── TEST_REPORT.md                真实执行结果（521 测试 / 评测 / Docker / Smoke）
 ├── CONTRACT_COMPLIANCE.md        契约逐条对照（含偏差与豁免）
 ├── Dockerfile · .env.example · requirements*.txt · pytest.ini
 ├── app/
@@ -483,10 +514,10 @@ careflow-ai-rag/
 ├── knowledge/
 │   ├── manifest/knowledge_manifest.csv     30 行
 │   ├── raw/                                官方原文 + _download_report.json + _dates.json
-│   ├── processed/                          27 篇清洗 Markdown
-│   └── chunks/chunks.jsonl                 1041 个切片 + index_meta.json
-├── scripts/                      12 个脚本（见 §4.5）
+│   ├── processed/                          31 篇清洗 Markdown（28 active + 3 draft）
+│   └── chunks/chunks.jsonl                 2451 个切片（2448 可检索）+ index_meta.json
+├── scripts/                      13+ 个脚本（见 §4.5）
 ├── eval/                         datasets/(7 套件) + REPORT.md + results/
-├── tests/                        21 个测试文件 / 497 用例
+├── tests/                        521 用例（23 个测试文件）
 └── docs/                         API.md / RAG_ARCHITECTURE.md / SAFETY.md / KNOWLEDGE_BASE.md
 ```

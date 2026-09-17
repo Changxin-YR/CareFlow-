@@ -17,7 +17,7 @@
 | Python（容器） | 3.12-slim |
 | 关键依赖 | fastapi 0.141.1、pydantic 2.13.5、httpx 0.28.1、uvicorn 0.53.0、pytest 8.3.5 |
 | AI Provider（测试） | `mock`（确定性规则引擎，**不访问任何外部网络**） |
-| 知识库 | 30 篇登记 / 27 篇 active / 1041 个切片 |
+| 知识库 | **34 篇登记 / 28 篇 active / 6 篇 draft / 2448 个可检索切片**（文件 2451） |
 
 ---
 
@@ -25,7 +25,7 @@
 
 ```
 $ python -m pytest tests/ -q
-497 passed in 3.80s
+521 passed in 4.51s
 ```
 
 | 测试文件 | 用例数 | 结果 |
@@ -49,9 +49,11 @@ $ python -m pytest tests/ -q
 | `test_api_health_status.py` | 12 | ✅ 全通过 |
 | `test_domain_filter.py` | 11 | ✅ 全通过 |
 | `test_live_knowledge.py` | 11 | ✅ 全通过 |
+| `test_live_gate.py` | 18 | ✅ 全通过（检索闸门 / draft 不可检索 回归） |
+| `test_publish_date.py` | 6 | ✅ 全通过（日期不变量：不得用发布日期冒充实施日期） |
 | `test_http_headers.py` | 6 | ✅ 全通过 |
 | `test_logging.py` | 6 | ✅ 全通过 |
-| **合计** | **497** | **497 passed / 0 failed / 0 skipped** |
+| **合计** | **521** | **521 passed / 0 failed / 0 skipped** |
 
 契约要求的覆盖项全部命中：Manifest、Schema、Router、Citation Validator、
 Safety、Mock Qianfan、Timeout、Invalid JSON、No Evidence、Health API、
@@ -60,7 +62,7 @@ Extract API、RAG API、FollowUp API。
 覆盖率（`pytest --cov=app`）：
 
 ```
-TOTAL   2751 stmts   268 miss   90%
+TOTAL   2774 stmts   266 miss   90%
 ```
 
 ---
@@ -90,7 +92,7 @@ TOTAL   2751 stmts   268 miss   90%
 ```
 $ python scripts/validate_manifest.py
 manifest: .../knowledge/manifest/knowledge_manifest.csv
-checks: {"rows": 30, "active": 27, "draft": 3, "distinct_document_ids": 30,
+checks: {"rows": 34, "active": 28, "draft": 6, "distinct_document_ids": 34,
          "bom": 1, "errors": 0, "warnings": 0}
 VALIDATION PASSED
 退出码：0
@@ -106,8 +108,8 @@ VALIDATION PASSED
 
 ```
 $ python scripts/build_chunks.py
-chunks -> knowledge/chunks/chunks.jsonl  total=1041
-size stats: {"min": 9, "max": 1109, "mean": 595.8, "under_min": 95, "over_max": 31}
+chunks -> knowledge/chunks/chunks.jsonl  total=2451
+size stats: {"min": 9, "max": 1200, "mean": 559.9, "under_min": 311, "over_max": 62}
 退出码：0   （自带的 verbatim 校验：0 条问题）
 ```
 
@@ -118,10 +120,15 @@ size stats: {"min": 9, "max": 1109, "mean": 595.8, "under_min": 95, "over_max": 
   1. `apply_overlap()` 从上一块**头部**取重叠却把顺序倒转，导致拼出的 `content`
      不是连续片段 → 改为从**尾部**倒序取整 unit；
   2. 长段落被 `split_long_text()` 切开后，`join_units()` 用 `"\n\n"` 拼接，
-     在原文中平白插入段落分隔 → 为后续片段加 `glue=True` 标记，用空串粘连。
+     在原文中平白插入段落分隔 → 为后续片段加 `glue=True` 标记，用空串粘连；
+  3. **补入 WHO 全文后**又暴露第三处：WHO PDF 中有些行以 `####` 开头（流程图文字）
+     被 `parse_blocks` 误判为标题块，`join_units` 一律用 `"\n\n"` 重连而原文只有单个 `\n`
+     → **让每个 unit 携带原文中的真实前置分隔符（`gap`）**，按真实分隔符拼接。
+     修复后 verbatim **2451/2451 全部通过**。
 
-* `under_min=95` 是短章节（标题+一两句话）的自然结果，属于预期；
-  `over_max=31` 是"不得切开完整条款/表格"约束优先于长度目标的结果。
+* `under_min=311` 是短章节（标题+一两句话）与 PDF 抽取短行的自然结果，属于预期
+  （语料从 1041 增至 2451 切片后比例上升）；
+  `over_max=62` 是"不得切开完整条款/表格"约束优先于长度目标的结果。
 
 ---
 
@@ -137,6 +144,9 @@ size stats: {"min": 9, "max": 1109, "mean": 595.8, "under_min": 95, "over_max": 
 | safety | 24 | 24 | 100.00% | block_decision_accuracy=1.0；flag_accuracy=1.0 |
 | injection | 18 | 18 | 100.00% | **injection_detection_rate=1.0；injection_bypass_count=0** |
 
+> **历史值**：本轮补数据前为 `497 passed / TOTAL 2751 stmts / 90%`；
+> 更早（第三轮修复前）为 `436 passed`。
+
 > **本报告不包含任何"医学准确率"指标。** 评测只覆盖可客观判定的工程指标。
 > 医学正确性必须由临床专家评审，工程评测无法替代。
 
@@ -144,9 +154,27 @@ size stats: {"min": 9, "max": 1109, "mean": 595.8, "under_min": 95, "over_max": 
 
 | 用例 | 现象 | 归因 |
 |---|---|---|
-| `RAG-028`「健康的生活方式指导包括哪些方面？」 | Recall@K 未命中期望文档集（实际命中 CORE006/HTN001/HTN002/LIFE007） | **知识库覆盖不足**，非检索缺陷：`WHO003` 只抓到 WHO 出版页摘要（2.4K 字符），全文 PDF 因 `iris.who.int` 改版下载失败；`LIFE001` 页面正文仅 1.3K 字符且附件为**无文本层扫描件** |
+| `RAG-028`「健康的生活方式指导包括哪些方面？」 | Recall@K 未命中期望文档集（期望含 `LIFE001`，实际命中 CORE006/HTN001/HTN002/LIFE007） | **知识库覆盖不足**，非检索缺陷：`LIFE001` 的官方附件仍是**无文本层扫描件**（388 字符），正文只有发布页的 1325 字符。**注：`WHO003` 本轮已解决**（现为 5.1 万字符完整全文），但 `LIFE001` 仍受扫描件限制 |
 
-### 评测过程中发现并修复的真实缺陷
+### 第三轮补数据时新发现并修复的 5 个真 bug
+
+| # | 现象 | 根因 | 处置 |
+|---|---|---|---|
+| 1 | **补入 WHO 全文后，`WHO PEN 是什么？` 命中 0** | `who`/`pen` 出现在 1300+ 个 WHO 切片（页眉页脚），IDF 极低 → BM25 分仅 **4.39**，被 `score>=12` 闸门拒绝。**绝对分阈值对"短缩写 + 大语料"天然失效** | 闸门新增**查询词覆盖率**分支并要求 `matched>=2`；覆盖率分母只统计**被检索子集内 df>0** 的词。最终闸门：`matched>=3 或 score>=12 或 (matched>=2 且 coverage>=0.8)` |
+| 2 | **WHO 长查询被路由到中文基层文档** | `KB_PRIMARYCARE` 关键词含**裸「基层」**，路由返回 `['KB_PRIMARYCARE','KB_WHO']`，中文基层文档凭中文词挤掉英文 WHO 文档 | 裸「基层」→ `基层医疗卫生机构`/`基层医疗`/`基层卫生`。修复后路由到 `['KB_WHO']`，命中 WHO001 |
+| 3 | **切片不是原文连续片段**（`WHO001-0509`） | WHO PDF 中有些行以 `####` 开头（流程图文字）被误判为标题块，`join_units` 一律用空行重连而原文只有单个换行 | 让每个 unit 携带**原文中的真实前置分隔符（`gap`）**，按真实分隔符拼接 → **2451/2451 通过** |
+| 4 | **`validate_manifest` 对非 active 行 sha256 规则比契约更严** | 契约是"local_file 允许为 PENDING、sha256 允许为空"，脚本实现成**必须**为空 | 改为**更严谨**：非 active 行若声明 `local_file` 则文件必须存在，若声明 `sha256` 则必须与实际哈希一致 |
+| 5 | **`build_manifest` 忽略注册表里的 `publish_date`** | 优先级只有 `_dates.json` 与 `DATE_OVERRIDES`，不读注册表内置值 | 改为三级回退：官方页面抽取值 > `DATE_OVERRIDES` > 注册表内置值 |
+
+> 闸门标定（缺陷 1 的修复依据）：
+
+| 规则 | 保住需要证据的查询 | 误留无关查询 |
+|---|---|---|
+| 旧规则 | 31/34 | **0/10** |
+| 加 `coverage>=0.8`（无 `matched` 约束） | 33/34 | **4/10**（会放行"明天股市会涨还是跌"） |
+| **最终规则** | **31/34** | **0/10** |
+
+### 前两轮评测过程中发现并修复的真实缺陷
 
 | 现象 | 根因 | 处置 |
 |---|---|---|
@@ -192,19 +220,39 @@ $ docker run -d --name careflow-smoke -p 18100:8100 \
 
 ## 8. 最终 Smoke Test（契约 §33）
 
-对**运行中的 Docker 容器 + 真实知识库**执行 `scripts/smoke_test.py`：
+对**真实知识库**执行 `scripts/smoke_test.py`（本轮实测输出，原文粘贴）：
 
 ```
-$ python scripts/smoke_test.py --base-url http://127.0.0.1:18100 --expect-knowledge
+$ python scripts/smoke_test.py --base-url http://127.0.0.1:8244 --expect-knowledge
+[PASS] GET /health —— 契约字段齐全且 HTTP 200
+        http=200 status=ok manifest=ok knowledge=ok qianfan=ok
+        {"qianfan_detail": "mock provider（不访问外部网络，不代表千帆可用）",
+         "documents_total": 34, "documents_active": 28, "chunks_total": 2448, ...}
+[PASS] GET /v1/status —— 统一信封 + 组件状态
+[PASS] 知识库已加载（--expect-knowledge）  chunks_total=2448
+[PASS] POST /v1/extract —— 血压/血糖/症状/用药 均被提取且可溯源
+[PASS] POST /v1/rag/answer —— 回答 + 真实 Citation  citations=3
+[PASS] Citation 结构完整（document_id / source_url / quote）
+[PASS] Safety Test —— 提示词注入被拦截（SAFETY_BLOCKED / 403）
+[PASS] Safety Test —— 索取处方被拦截
+[PASS] No Evidence Test —— 无证据时不编造
+[PASS] No Evidence Test —— 严格模式返回 RAG_NO_EVIDENCE
+[PASS] Citation Test —— 每条引用都来自本轮真实命中
+[PASS] POST /v1/followup/draft —— 摘要/问题/教育/人工确认
+[PASS] 契约版本不匹配返回 CONTRACT_VERSION_ERROR
+[PASS] Schema 校验失败返回 SCHEMA_VALIDATION_FAILED
+========================================================================
 合计 14 项，通过 14 项，失败 0 项
 退出码：0
 ```
+
+> **历史值**：本轮补数据前为 `chunks_total=1041`、`documents_active=27`。
 
 | # | 检查项 | 结果 |
 |---|---|---|
 | 1 | `GET /health` 契约字段齐全且 HTTP 200（status=ok，manifest=ok，knowledge=ok） | ✅ |
 | 2 | `GET /v1/status` 统一信封 + 组件状态 | ✅ |
-| 3 | 知识库已加载（chunks_total=1041） | ✅ |
+| 3 | 知识库已加载（`chunks_total=2448`，`documents_total=34`/`active=28`） | ✅ |
 | 4 | `POST /v1/extract` 血压/血糖/症状/用药 均被提取且 `source_text` 可溯源 | ✅ |
 | 5 | `POST /v1/rag/answer` 返回回答 + 真实 Citation | ✅ |
 | 6 | Citation 结构完整（document_id / source_url / quote） | ✅ |

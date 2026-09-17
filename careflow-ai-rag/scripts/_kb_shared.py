@@ -272,7 +272,7 @@ DOCUMENTS = [
        "KB_LIFESTYLE", "06_lifestyle",
        "https://www.nhc.gov.cn/ylyjs/gzdt/202407/9ec6136773bc41048a39f275fcc37b44.shtml",
        kind="pdf",
-       notes="官方附件为单页扫描件（文本层仅约 106 字符），需 OCR 才能全文入库"),
+       notes="官方附件是**原生文本型单页 PDF**（实测 0 张图片、0 个矢量对象），内容本身就是「标题 + 八条核心知识」，已完整收录，无需 OCR"),
     _d("LIFE008A", "居民体重管理核心知识（2024年版）释义", "国家卫生健康委",
        "P1", "nhc_policy", "2024版", "2024-07-02",
        ["OBESITY", "LIFESTYLE"],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T08:50:25+00:00",
+  "generated_at": "2026-09-17T09:22:10+00:00",
   "documents": [
     {
       "document_id": "CORE001",
@@ -395,16 +395,18 @@
     {
       "document_id": "LIFE008",
       "title": "居民体重管理核心知识（2024年版）",
-      "source_file": "knowledge/raw/06_lifestyle/LIFE008.html",
+      "source_file": "knowledge/raw/06_lifestyle/LIFE008.pdf",
       "extra_files": [],
       "out_file": "knowledge/processed/LIFE008.md",
-      "chars": 594,
-      "headings": 0,
+      "chars": 169,
+      "headings": 8,
       "tables": 0,
       "status": "ok",
       "error": "",
-      "input_kind": "html",
-      "used_file": "knowledge/raw/06_lifestyle/LIFE008.html"
+      "input_kind": "pdf",
+      "used_file": "knowledge/raw/06_lifestyle/LIFE008.pdf",
+      "annex_pdf": "knowledge/raw/06_lifestyle/LIFE008.pdf",
+      "annex_pdf_chars": 169
     },
     {
       "document_id": "LIFE008A",
@@ -523,6 +525,6 @@
     "ok": 31,
     "no_source": 3,
     "failed": 0,
-    "total_chars": 1353633
+    "total_chars": 1353208
   }
 }

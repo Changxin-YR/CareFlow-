@@ -579,28 +579,39 @@ RAG 流程中会合并三处报告：输入侧判定 + 上下文扫描 + 输出�
 **全仓测试整体**（命令：`python -m pytest tests/ -q`）：
 
 ```
-497 passed in 4.17s
+521 passed in 4.51s
 ```
 
 **覆盖率**（命令：`python -m pytest tests/ -q --cov=app --cov-report=term`）：
 
 ```
-TOTAL                                 2751    268    90%
+TOTAL                                 2774    266    90%
 ```
 
-**第三轮（2026-09-17）新增的 3 个 bug 回归文件**（共 61 用例，`436 → 497`）：
+**后续轮次新增的回归文件**（`436 → 497 → 521`）：
 
-| 测试文件 | 用例数 | 覆盖的缺陷 |
-|---|---:|---|
-| `tests/test_text_normalization.py` | 44 | **全角输入**：匹配侧折叠、`source_text` 保持用户原文（见 [`API.md` §6](./API.md)） |
-| `tests/test_domain_filter.py` | 11 | **域过滤**：`options.domains` 指定"存在但无 active 文档"的域 → 返回无证据，不再静默放大到全库 |
-| `tests/test_http_headers.py` | 6 | **响应头**：每个响应恰好 1 个 `X-Request-ID` 与 `X-CF-Contract-Version`（含各异常分支） |
+| 测试文件 | 用例数 | 覆盖的缺陷 | 轮次 |
+|---|---:|---|---|
+| `tests/test_text_normalization.py` | 44 | **全角输入**：匹配侧折叠、`source_text` 保持用户原文（见 [`API.md` §6](./API.md)） | 第三轮 |
+| `tests/test_domain_filter.py` | 11 | **域过滤**：`options.domains` 指定"存在但无 active 文档"的域 → 返回无证据，不再静默放大到全库 | 第三轮 |
+| `tests/test_http_headers.py` | 6 | **响应头**：每个响应恰好 1 个 `X-Request-ID` 与 `X-CF-Contract-Version`（含各异常分支） | 第三轮 |
+| `tests/test_live_gate.py` | 18 | **检索闸门**：WHO 缩写查询被绝对分阈值拦死、路由关键词「基层」过宽（见 [`KNOWLEDGE_BASE.md` §6.7](./KNOWLEDGE_BASE.md)） | 第四轮 |
+| `tests/test_publish_date.py` | 6 | **日期不变量**：不得用 `publish_date` 冒充 `effective_date` | 第四轮 |
 
 > **测试文件与用例数均可现场复核**：
-> `python -m pytest tests/<file> --collect-only`（44 / 11 / 6，合计 61；`436 + 61 = 497`）。
+> `python -m pytest tests/<file> --collect-only`（44 / 11 / 6 / 18 / 6，合计 85；`436 + 85 = 521`）。
+>
+> ⚠️ **注意 `tests/test_live_gate.py` 中的契约级护栏**（共 18 用例，**不要删除**）：
+> `test_draft_documents_never_retrieved`（draft 文档物理不可检索）、
+> `test_who_full_text_is_indexed`（WHO 全文已入索引）、
+> `test_gate_keeps_acronym_query_against_full_who_text`（缩写查询不被闸门拦死）、
+> `test_gate_blocks_unrelated_queries[...]`（10 条无关查询必须被拦）、
+> `test_no_publish_date_was_used_as_effective_date`（防"用发布日期冒充实施日期"）、
+> `test_manifest_dates_filled`、`test_split_documents_are_registered`。
 
 > **历史值（保留作对比）**：回归套件 `54`（第一轮）→ `76`（第二轮，即当前）；
-> 全仓 `399 passed, 11 skipped`（产物就绪前）→ `436 passed`（第三轮修复前）→ **`497 passed`（当前）**。
+> 全仓 `399 passed, 11 skipped`（产物就绪前）→ `436 passed`（第二轮）→ `497 passed`（第三轮）
+> → **`521 passed`（当前，第四轮补数据后）**。
 > 那 11 个 `skipped` 是需真实知识库产物的 `tests/test_live_knowledge.py`，
 > 知识库管线跑通后已全部通过（详见 [`KNOWLEDGE_BASE.md` §8.3](./KNOWLEDGE_BASE.md)）。
 ### 7.2 Eval 注入套件
@@ -681,7 +692,7 @@ TOTAL                                 2751    268    90%
 > **2026-09-17 更新（两轮修复）**：§9.1 / §9.2 / §9.3 / §9.5 报告的缺陷**已完成修复**；
 > 另第一轮修复引入的**膳食数值误裁**（§9.5.2）亦已修复。
 > 回归测试见 `tests/test_safety_regressions.py`（**17 个测试函数 / 76 passed**），
-> 全仓 `python -m pytest tests/ -q` = **497 passed**（覆盖率 `TOTAL 2751 stmts / 268 miss / 90%`）。
+> 全仓 `python -m pytest tests/ -q` = **521 passed**（覆盖率 `TOTAL 2774 stmts / 266 miss / 90%`）。
 > 各小节保留**修复前的复现输入**作为历史证据，状态列已更新为「已修复」。
 > **§9.6 / §9.7 及本节末尾「修复后依然存在的局限」仍为未修复的开放项。**
 

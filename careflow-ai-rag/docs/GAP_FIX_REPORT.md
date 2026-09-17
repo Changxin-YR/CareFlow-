@@ -28,6 +28,7 @@
 
 **评测未回退**：7 个套件中 6 个 100%，RAG 96.88%，**虚假引用 0**，无证据判定 100%。
 测试 **497 → 515 全通过**（新增 18 条回归用例）。
+> **历史值说明**：本报告的执行时点全仓为 `515 passed`；其后又新增 `tests/test_publish_date.py`（6 用例），**当前全库为 `521 passed`**（详见 [`TEST_REPORT.md`](../TEST_REPORT.md)）。
 
 ---
 
@@ -131,10 +132,12 @@ https://www.nhc.gov.cn/ewebeditor/uploadfile/2016/01/20160128143208616.pdf
 
 | document_id | 标题 | 字节 | SHA256（前 16） | 正文 | 状态 |
 |---|---|---:|---|---:|---|
-| `LIFE008` | 居民体重管理核心知识（2024年版） | 42,903 | `27e731b9…` | 594 字符（官方发布页公文正文） | active |
+| `LIFE008` | 居民体重管理核心知识（2024年版） | 42,903 | `27e731b9…` | 169 字符（**官方附件 PDF 全文**，即「标题 + 八条核心知识」） | active |
 | `LIFE008A` | 居民体重管理核心知识（2024年版）释义 | 155,242 | `fa044afcfe008651` | **2,092 字符，文本层可用** | active |
 
-「释义」那份的文本层是**可用**的（4 页，1974 字符，`title_bigram_ratio=1.0`），已正式入库。
+**订正**：`LIFE008` 的官方附件曾被我误判为「单页扫描件」，实测它是**原生文本型 PDF**（0 张图片、0 个矢量对象），文本层 106 字符**就是全文** —— 这份官方文件本身就是一页卡片：标题 + 八条核心知识。已把正文来源从发布通知页改为该附件，引用准确性更高。
+
+「释义」那份（4 页，1974 字符，`title_bigram_ratio=1.0`）已正式入库。
 实测 `居民如何进行科学体重管理？` → 同时命中 `LIFE008` 与 `LIFE008A`，引用可追溯。
 
 ---
@@ -315,7 +318,7 @@ draft 行写错 sha256 → 报错 ✅；draft 行文件不存在 → 报错 ✅�
 | 2 | `CORE002` 正文 | **BLOCKED** | 官方 PDF 是纯扫描件（0 字符/10 页） | OCR + 人工校对 |
 | 3 | `LIFE001` 正文 | **PARTIALLY_RESOLVED** | 官方附件为扫描件（388 字符） | OCR + 人工校对 |
 | 4 | `LIFE001A/B/C` 正文 | **PARTIALLY_RESOLVED** | 官方附件为扫描件（391~418 字符），已置 draft | OCR + 人工校对后改回 active |
-| 5 | `LIFE008` 正文 | **PARTIALLY_RESOLVED** | 官方附件为单页扫描件（106 字符） | OCR + 人工校对 |
+| 5 | ~~`LIFE008` 正文~~ | ✅ **RESOLVED** | —— | 曾误判为扫描件；实测是**原生文本型单页 PDF**（0 图片 / 0 矢量对象），文本层 106 字符即全文，已改为以该附件为正文来源 |
 | 6 | `DM002`/`DM003`/`MULTI001` | **NOT_AVAILABLE_LEGALLY** | 付费墙 / 需机构授权 | 机构采购，或找国家级中心官网的免费版 |
 | 7 | `effective_date` 32/34 为空 | **RESOLVED（按其规则）** | 原文未写实施日期 | 无需处理（契约允许） |
 | 8 | `P2`（国家级医学中心）等级仍 0 篇 | 未在本轮范围 | — | 后续补充来源 |
@@ -379,6 +382,7 @@ draft 行写错 sha256 → 报错 ✅；draft 行文件不存在 → 报错 ✅�
 
 ```
 python -m pytest tests/            → 515 passed（原 497，新增 18 条回归用例）
+                                      # 当前实际为 521 passed（见上方历史值说明）
 python scripts/validate_manifest.py → VALIDATION PASSED（errors=0, warnings=0）
 python scripts/verify_sources.py    → VERIFY PASSED（errors=0, warnings=0）
 python scripts/build_chunks.py      → 2451 chunks, 0 verbatim problems
@@ -405,7 +409,7 @@ python scripts/verify_sources.py           # 必须 VERIFY PASSED
 python scripts/verify_content_match.py     # 乱码/错源检测
 
 # 3) 测试与评测
-python -m pytest tests/ -q                 # 期望 515 passed
+python -m pytest tests/ -q                 # 期望 521 passed（本报告执行时为 515）
 python scripts/evaluate.py --provider mock # 期望 6 套 100% / RAG 96.88%
 
 # 4) 端到端

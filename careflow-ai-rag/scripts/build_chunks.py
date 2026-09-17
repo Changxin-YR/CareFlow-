@@ -347,6 +347,7 @@ def make_chunks(document_id: str, text: str, meta: dict, args) -> list[dict]:
             "authority": meta.get("authority", ""),
             "authority_level": meta.get("authority_level", ""),
             "version": meta.get("version", ""),
+            "publish_date": meta.get("publish_date", ""),
             "effective_date": meta.get("effective_date", ""),
             "diseases": [x for x in (meta.get("diseases", "") or "").split("|") if x],
             "scenarios": [x for x in (meta.get("scenarios", "") or "").split("|") if x],
