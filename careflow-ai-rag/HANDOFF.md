@@ -396,6 +396,11 @@ python scripts/sync_qianfan.py            # 推送到千帆（BLOCKED 待验证�
 
 ### 7.2 数据覆盖缺口（最重要的一组）
 
+> 📌 **需要派人去外部找资料时，直接把 [`docs/DATA_GAPS.md`](docs/DATA_GAPS.md) 交给他。**
+> 那份文件写清了：每条缺口的「官方入口 / 去哪找 / 怎么判断找对了 / 拿到文件后的完整入库步骤 / 验收标准」，
+> 不需要懂代码即可执行；也标注了两个必踩的坑（`annex_pdf` 与 `secondary_files` 不清空会导致新文件不被使用）。
+
+
 | 文档 | 缺口 | 现状 |
 |---|---|---|
 | `PRIM003`（P0 标准 WS/T 484—2015 老年人健康管理技术规范） | **实质正文缺失**：PDF ToUnicode 损坏、发布页仅 281 字符元数据 | 39 页 PDF 仍在 `knowledge/raw/07_primarycare/PRIM003.pdf`（3.9 MB）待替换干净源 |

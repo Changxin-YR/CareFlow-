@@ -303,6 +303,7 @@ curl http://127.0.0.1:8100/health
 | [docs/RAG_ARCHITECTURE.md](docs/RAG_ARCHITECTURE.md) | 检索链路、BM25/RRF 公式、Citation 校验、降级路径 |
 | [docs/SAFETY.md](docs/SAFETY.md) | 硬拦截/软标记/红旗/输出裁剪清单 + **已知局限** |
 | [docs/KNOWLEDGE_BASE.md](docs/KNOWLEDGE_BASE.md) | 来源表、权威等级策略、人工下载清单、切片统计 |
+| **[docs/DATA_GAPS.md](docs/DATA_GAPS.md)** | **需要人工获取的官方资料清单（去哪找 + 找到后怎么入库 + 验收标准）** |
 | [HANDOFF.md](HANDOFF.md) | 交接说明与 **BLOCKED 清单** |
 | [TEST_REPORT.md](TEST_REPORT.md) | 真实执行的测试结果 |
 | [CONTRACT_COMPLIANCE.md](CONTRACT_COMPLIANCE.md) | 契约逐条对照 |
